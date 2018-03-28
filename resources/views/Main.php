@@ -6,10 +6,20 @@
     <title>Mytix-Main</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <style>
+    @font-face {
+        font-family: logoFont;
+        src: url(Englebert-Regular.ttf)
+    }
+
+    .logo {
+      font-family: logoFont;
+      font-size: 32px;
+    }
+
     .view {
         transition: transform .2s;
         margin: 0 auto;
@@ -26,10 +36,10 @@
         margin-top: 20px;
         display: none;
     }
-    
+
     #toggleButton
     {
-        position:relative; left:50%; 
+        position:relative; left:50%;
         color:aliceblue;
     }
 
@@ -112,7 +122,7 @@
             <div class="carousel-caption">
                 <h3>Back From the Future</h3>
             </div>
-        </div>  
+        </div>
     </div>
 
     <a class="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -127,18 +137,45 @@
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="Main.php">Mytix</a>
+            <a class="navbar-brand logo" href="Main.php">JAVTix</a>
         </div>
         <ul class="nav navbar-nav">
-            <li>
+            <li class="view zoom">
                 <a href="#myCarousel">Home</a>
             </li>
-            <li>
+            <li class="view zoom">
                 <a href="#mov">Movies</a>
             </li>
-            <li>
+            <li class="view zoom">
                 <a href="#toggleButton">Cinema</a>
             </li>
+            <div class="container">
+              <ul class="nav navbar-nav">
+                <li class="nav-item dropdown">
+                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                   Select Movie...
+                 </a>
+                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                   <a class="dropdown-item" href="#">Action</a>
+                   <a class="dropdown-item" href="#">Another action</a>
+                   <a class="dropdown-item" href="#">Something else here</a>
+                 </div>
+               </li>
+               <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Select City...
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+                <li>
+                  <a href="#" class="btn view zoom"><span class="glyphicon glyphicon-search">Search</span></a>
+                </li>
+              </ul>
+            </div>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li>
@@ -153,7 +190,7 @@
     </div>
 </nav>
 <div style="color:aliceblue">
-    <h2 id="mov" style="text-align:center">Movies</h2>
+    <h2 id="mov" style="text-align:center">Now Playing</h2>
     <hr>
     <div class="row" style="width:100%" align="center">
         <div class="col-sm-3">

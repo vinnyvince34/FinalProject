@@ -37,11 +37,12 @@
     .tabcontent {
         display: none;
         padding: 6px 12px;
+        margin: auto;
     }
 
     input{
         color: aliceblue;
-        transition: width 0.4s ease-in-out; 
+        transition: width 0.4s ease-in-out;
         -webkit-transition: width 0.4s ease-in-out;
     }
 
@@ -126,7 +127,7 @@
         </div>
     </div>
     <footer>
-        
+
     </footer>
 </body>
 </html>
