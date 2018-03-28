@@ -10,6 +10,11 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <style>
+    @font-face {
+        font-family: logoFont;
+        src: url(Englebert-Regular.ttf)
+    }
+    
     .tab {
         overflow: hidden;
         border: 1px solid #ccc;
@@ -42,6 +47,9 @@
 
     input{
         color: aliceblue;
+        background-color: #27363b;
+        border: none;
+        border-bottom: 2px solid aliceblue;
         transition: width 0.4s ease-in-out;
         -webkit-transition: width 0.4s ease-in-out;
     }
@@ -67,12 +75,16 @@
             document.getElementById(tab).style.display = "block";
             evt.currentTarget.className += " active";
         }
+
+    window.onload = function() {
+        tabbed(event, 'SignUp');
+    };
 </script>
 <body style="background-color: #27363b">
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="Main.php">Mytix</a>
+                <a class="navbar-brand logo" href="Main.php">JAVTix</a>
             </div>
             <ul class="nav navbar-nav">
                 <li>
@@ -101,8 +113,10 @@
             <h3>Sign Up</h3>
             <hr>
             <form action="">
-                <h5>Name</h5>
-                <input type="text" value="" name="name" style="color:black" require>
+                <h5>First Name</h5>
+                <input type="text" value="" name="firstName" style="color:black" require>
+                <h5>Last Name</h5>
+                <input type="text" value="" name="lastName" style="color:black" require>
                 <h5>Email</h5>
                 <input type="email" value="" name="email" style="color:black" require>
                 <h5>Password</h5>
@@ -110,10 +124,10 @@
                 <h5>Phone Number</h5>
                 <input type="text" value="" name="phone" style="color:black" require>
                 <br><br>
-                <input type="submit" value="Submit" name="Submit" style="color:black; width:7%; position:relative; left:50%">
+                <input type="submit" value="Submit" name="Submit" style="color:black; width:7%; position:relative; left:47%; background-color: grey; border: 2px solid black">
             </form>
         </div>
-        <div id="LogIn" class="tabcontent">
+        <div id="LogIn" class="pay" style="aliceblue">
             <h3>Log In</h3>
             <hr>
             <form action="">
@@ -122,7 +136,7 @@
                 <h5>Password</h5>
                 <input type="password" value="" name="password" style="color:black" require>
                 <br><br>
-                <input type="submit" value="Submit" name="Submit" style="color:black; width:7%; position:relative; left:50%">
+                <input type="submit" value="Submit" name="Submit" style="color:black; width:7%; position:relative; left:47%; background-color: grey; border: 2px solid black">
             </form>
         </div>
     </div>
