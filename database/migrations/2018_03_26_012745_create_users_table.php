@@ -14,15 +14,17 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('cinema_id');
+            $table->increments('user_id');
+            $table->string('preferred_cinema_id');
             $table->string('name');
-            $table->string('gender');
-            $table->string('birth_date');
+            $table->string('gender', 1);
+            $table->date('birth_date');
             $table->string('phone_number');
             $table->string('city');
             $table->string('email');
             $table->string('password');
+            
+            $table->foreign('preferred_cinema_id')->references('cinema_id')->on('cinemas');
             $table->timestamps();
         });
     }

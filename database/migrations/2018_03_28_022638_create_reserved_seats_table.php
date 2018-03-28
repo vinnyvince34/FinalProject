@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTransactionsTable extends Migration
+class CreateReservedSeatsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,14 @@ class CreateTransactionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('transactions', function (Blueprint $table) {
-            $table->increments('transaction_id'); // transaction_id
-            $table->unsignedInteger('customer_id');
+        Schema::create('reserved_seats', function (Blueprint $table) {
+            $table->unsignedInteger('seat_id');
+            $table->unsignedInteger('transaction_id');
             $table->unsignedInteger('schedule_id');
-            $table->tinyInteger('quantity');
-            $table->integer('total_price');
-            $table->string('promo_id');
             
-            $table->foreign('customer_id')->references('user_id')->on('users');
+            $table->foreign('seat_id')->references('seat_id')->on('seats');
+            $table->foreign('transaction_id')->references('transaction_id')->on('transactions');
             $table->foreign('schedule_id')->references('schedule_id')->on('schedules');
-
             $table->timestamps();
         });
     }
@@ -35,6 +32,6 @@ class CreateTransactionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('transactions');
+        Schema::dropIfExists('reserved_seats');
     }
 }
