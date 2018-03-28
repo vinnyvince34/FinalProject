@@ -14,13 +14,15 @@ class CreateCreditCardsTable extends Migration
     public function up()
     {
         Schema::create('credit_cards', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('customer_id');
+            $table->string('id', 8); // first 8 digits; pake credit card number
+            $table->unsignedInteger('user_id');
             $table->string('first_name');
             $table->string('last_name');
             $table->string('address');
             $table->string('zip_code');
             $table->string('city');
+            
+            $table->foreign('user_id')->references('user_id')->on('users');
             $table->timestamps();
         });
     }
