@@ -10,6 +10,11 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <style>
+    @font-face {
+        font-family: logoFont;
+        src: url(Englebert-Regular.ttf)
+    }
+
     .text {
         display: block;
         width: 100px;
@@ -21,12 +26,36 @@
     th, tr, td{
         padding-bottom: 10px;
     }
+
+    input{
+        color: aliceblue;
+        background-color: #27363b;
+        border: none;
+        border-bottom: 2px solid aliceblue;
+    }
 </style>
+<script>
+    var timeByCategory = {
+    xxi: ["10:00 - 12:30", "13:00 - 15:30", "16:00 - 18:30", "19:00 - 21:30","22:00 - 00:30"],
+    cgv: ["10:10 - 12:40", "13:10 - 15:40", "16:10 - 18:40", "19:10 - 21:40","22:10 - 00:40"],
+    }
+
+    function changetime(value) {
+        if (value.length == 0) document.getElementById("time").innerHTML = "<option></option>";
+        else {
+            var catOptions = "";
+            for (var categoryId in timeByCategory[value]) {
+                catOptions += "<option>" + timeByCategory[value][categoryId] + "</option>";
+            }
+            document.getElementById("time").innerHTML = catOptions;
+        }
+    }
+</script>
 <body style="background-color: #27363b">
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="Main.php">Mytix</a>
+                <a class="navbar-brand logo" href="Main.php">JAVTix</a>
             </div>
             <ul class="nav navbar-nav">
                 <li>
@@ -140,7 +169,29 @@
                 </table>
             </div>
         </div>
+        <div style="text-align:center">
+            <h3>Interested?</h3>
+            <form action="Payment.php">
+                <h5>Number of People</h5>
+                <input type="number" value="" name="numberPeople" style="color:black" require>
+                <h5>Cinema</h5>
+                <select name="cinemaSelect" id="cinemaSelect" style="color:black" onChange="changetime(this.value);">
+                    <option value="" style="color:grey" disabled selected>Select</option>
+                    <option value="xxi" style="color:black">XXI</option>
+                    <option value="cgv" style="color:black">CGV</option>
+                </select>
+                <h5>Time</h5>
+                <select  name="time" id="time" style="color:black">
+                    <option value="" style="color:grey" disabled selected>Select</option>
+                </select>
+                <br><br>
+                <input type="submit" value="Submit" name="Submit" style="color:black; width:7%; position:absolute; left:46.5%; background-color: grey; border: 2px solid black">
+            </form>
+        </div>
     </div>
+    <br>
+    <br>
+    <br>
     <footer>
 
     </footer>
