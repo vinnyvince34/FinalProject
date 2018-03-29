@@ -18,7 +18,7 @@ class CreateReservedSeatsTable extends Migration
             $table->unsignedInteger('transaction_id');
             $table->unsignedInteger('schedule_id');
             
-            $table->foreign('seat_id')->references('seat_id')->on('seats');
+            $table->foreign('seat_id')->references('seat_id')->on('all_seats');
             $table->foreign('transaction_id')->references('transaction_id')->on('transactions');
             $table->foreign('schedule_id')->references('schedule_id')->on('schedules');
             $table->timestamps();

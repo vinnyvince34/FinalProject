@@ -14,7 +14,7 @@ class CreateSchedulesTable extends Migration
     public function up()
     {
         Schema::create('schedules', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('schedule_id');
             $table->unsignedInteger('movie_id');
             $table->unsignedInteger('cinema_id');
             $table->unsignedInteger('type_id');
@@ -22,7 +22,7 @@ class CreateSchedulesTable extends Migration
 
             $table->foreign('movie_id')->references('movie_id')->on('movies');
             $table->foreign('cinema_id')->references('cinema_id')->on('cinemas');
-            $table->foreign('user_id')->references('type_id')->on('room_types');
+            $table->foreign('type_id')->references('type_id')->on('room_types');
 
             $table->timestamps();
         });
