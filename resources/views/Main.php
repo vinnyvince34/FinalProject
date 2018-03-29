@@ -15,9 +15,22 @@
         src: url(Englebert-Regular.ttf)
     }
 
+    footer {
+      text-align: center;
+    }
+
     .logo {
       font-family: logoFont;
       font-size: 32px;
+    }
+
+    .logoFooter {
+      pointer-events: none;
+    }
+
+    .ads {
+      width: 150px;
+      height: 100px;
     }
 
     .view {
@@ -28,6 +41,16 @@
     .view:hover{
         transform: scale(1.5);
         filter: saturate(50%);
+    }
+
+    .navbar {
+      margin-bottom: 0;
+    }
+
+    .container-search {
+      margin-left: 570px;
+      width: auto;
+      text-align: center;
     }
 
     #hide{
@@ -140,42 +163,15 @@
             <a class="navbar-brand logo" href="Main.php">JAVTix</a>
         </div>
         <ul class="nav navbar-nav">
-            <li class="view zoom">
-                <a href="#myCarousel">Home</a>
-            </li>
-            <li class="view zoom">
-                <a href="#mov">Movies</a>
-            </li>
-            <li class="view zoom">
-                <a href="#toggleButton">Cinema</a>
-            </li>
-            <div class="container">
-              <ul class="nav navbar-nav">
-                <li class="nav-item dropdown">
-                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                   Select Movie...
-                 </a>
-                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                   <a class="dropdown-item" href="#">Action</a>
-                   <a class="dropdown-item" href="#">Another action</a>
-                   <a class="dropdown-item" href="#">Something else here</a>
-                 </div>
-               </li>
-               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Select City...
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-              </li>
-                <li>
-                  <a href="#" class="btn view zoom"><span class="glyphicon glyphicon-search">Search</span></a>
-                </li>
-              </ul>
-            </div>
+          <li class="view zoom">
+              <a href="#myCarousel"><span class="glyphicon glyphicon-home"></span></a>
+          </li>
+          <li class="view zoom">
+              <a href="#mov">Movies</a>
+          </li>
+          <li class="view zoom">
+              <a href="#toggleButton">Cinema</a>
+          </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li>
@@ -188,6 +184,35 @@
             </li>
         </ul>
     </div>
+</nav>
+<nav class="navbar navbar-inverse">
+  <div class="container-search">
+    <ul class="nav navbar-nav">
+      <li class="nav-item dropdown">
+       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Select Movie...
+       </a>
+       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+         <a class="dropdown-item" href="#">Action</a>
+         <a class="dropdown-item" href="#">Another action</a>
+         <a class="dropdown-item" href="#">Something else here</a>
+       </div>
+     </li>
+     <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Select City...
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+      </div>
+    </li>
+      <li>
+        <a href="#" class="btn view zoom"><span class="glyphicon glyphicon-search">Search</span></a>
+      </li>
+    </ul>
+  </div>
 </nav>
 <div style="color:aliceblue">
     <h2 id="mov" style="text-align:center">Now Playing</h2>
@@ -239,9 +264,24 @@
     <h2 id="promo" style="text-align:center">Promotion</h2>
     <hr>
     <h2 id="ads" style="text-align:center">Ads</h2>
+    <div class="row" align="center">
+      <div class="col-sm-3">
+        <img src="ad1.png" class="ads">
+      </div>
+      <div class="col-sm-3">
+        <img src="ad2.png" class="ads">
+      </div>
+      <div class="col-sm-3">
+        <img src="ad3.png" class="ads">
+      </div>
+      <div class="col-sm-3">
+        <img src="ad4.png" class="ads">
+      </div>
+      </div>
+    </div>
     <hr>
     <footer>
-
+      <p>COPYRIGHT 2018. JAVTix ALL RIGHTS RESERVED.</p>
     </footer>
 </div>
 </body>
