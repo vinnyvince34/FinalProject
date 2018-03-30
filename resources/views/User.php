@@ -77,7 +77,7 @@
         }
 
     window.onload = function() {
-        tabbed(event, 'SignUp');
+        tabbed(event, 'LogIn');
     };
 </script>
 <body style="background-color: #27363b">
@@ -94,11 +94,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <li>
                     <a href="User.php">
-                        <span class="glyphicon glyphicon-user"></span> Sign Up</a>
-                </li>
-                <li>
-                    <a href="User.php">
-                        <span class="glyphicon glyphicon-log-in"></span> Login</a>
+                        <span class="glyphicon glyphicon-user"></span> User</a>
                 </li>
             </ul>
         </div>
@@ -127,7 +123,7 @@
                 <input type="submit" value="Submit" name="Submit" style="color:black; width:7%; position:relative; left:47%; background-color: grey; border: 2px solid black">
             </form>
         </div>
-        <div id="LogIn" class="pay" style="aliceblue">
+        <div id="LogIn" class="tabcontent">
             <h3>Log In</h3>
             <hr>
             <form action="">

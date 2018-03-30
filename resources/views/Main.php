@@ -29,8 +29,7 @@
     }
 
     .ads {
-      width: 150px;
-      height: 100px;
+      width: 100%;
     }
 
     .view {
@@ -176,11 +175,7 @@
         <ul class="nav navbar-nav navbar-right">
             <li>
                 <a href="User.php">
-                    <span class="glyphicon glyphicon-user"></span> Sign Up</a>
-            </li>
-            <li>
-                <a href="User.php">
-                    <span class="glyphicon glyphicon-log-in"></span> Login</a>
+                    <span class="glyphicon glyphicon-user"></span> User</a>
             </li>
         </ul>
     </div>
@@ -262,24 +257,52 @@
     </div>
     <br>
     <h2 id="promo" style="text-align:center">Promotion</h2>
-    <hr>
+    <hr style="width:101%">
     <h2 id="ads" style="text-align:center">Ads</h2>
-    <div class="row" align="center">
-      <div class="col-sm-3">
-        <img src="ad1.png" class="ads">
-      </div>
-      <div class="col-sm-3">
-        <img src="ad2.png" class="ads">
-      </div>
-      <div class="col-sm-3">
-        <img src="ad3.png" class="ads">
-      </div>
-      <div class="col-sm-3">
-        <img src="ad4.png" class="ads">
-      </div>
-      </div>
+    <br>
+    <br>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width:101%">
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+
+        <div class="carousel-inner">
+            <div class="item active" align="middle">
+                <img src="ad1.png">
+            </div>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="item" align="middle">
+                <img src="ad2png">
+            </div>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="item" align="middle">
+                <img src="ad3.png">
+            </div>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="item" align="middle">
+                <img src="ad4.png">
+            </div>
+        </div>
+
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
-    <hr>
+    <hr style="width:101%">
     <footer>
       <p>COPYRIGHT 2018. JAVTix ALL RIGHTS RESERVED.</p>
     </footer>

@@ -14,24 +14,11 @@
         font-family: logoFont;
         src: url(Englebert-Regular.ttf)
     }
-
-    input{
-        color: aliceblue;
-        background-color: #27363b;
-        border: none;
-        border-bottom: 2px solid aliceblue;
-        transition: width 0.4s ease-in-out;
-        -webkit-transition: width 0.4s ease-in-out;
-    }
-
-    input:focus{
-        width: 100%;
-    }
 </style>
 <script>
 
 </script>
-<body style="background-color: #27363b">
+<body style="color:aliceblue; background-color: #27363b">
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -50,22 +37,13 @@
             </ul>
         </div>
     </nav>
-    <div style="color:aliceblue">
-        <h3 style="text-align:center">Cart</h3>
-        <hr>
-        <div style="padding:10px 100px 10px 100px">
-            <form action="PayOK.php">
-                <h5>Credit Card Number</h5>
-                <input type="text" value="" name="creditCardNumber" style="color:black" require>
-                <h5>Address</h5>
-                <input type="text" value="" name="address" style="color:black" require>
-                <h5>Zip Code</h5>
-                <input type="text" value="" name="address" style="color:black" require>
-                <br>
-                <br>
-                <input type="submit" value="Submit" name="Submit" style="color:black; width:7%; position:relative; left:47%; background-color: grey; border: 2px solid black"> 
-            </form>
-        </div>
+    <div>
+        <h2 style="text-align:center; margin: 20px 0px 20px 0px">Transaction was a success!</h2>
+    </div>
+    <div style="position:absolute; left:45%">
+        <a href="Main.php">
+            <button>Return to main page</button>
+        </a>
     </div>
 </body>
 </html>
