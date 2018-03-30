@@ -21,6 +21,8 @@ class CreateCinemasTable extends Migration
             $table->string('cinema_what');
             $table->timestamps();
         });
+        
+        DB::statement('ALTER TABLE  users ALTER COLUMN id SET DEFAULT uuid_generate_v4();');
     }
 
     /**

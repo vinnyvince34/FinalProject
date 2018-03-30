@@ -14,15 +14,17 @@ class CreateTheatresTable extends Migration
     public function up()
     {
         Schema::create('theatres', function (Blueprint $table) {
-            $table->increments('theatre_id');
-            $table->unsignedInteger('cinema_id');
-            $table->unsignedInteger('type_id');
+            $table->uuid('id');
+            $table->uuid('cinema_id');
+            $table->uuid('type_id');
             $table->string('theatre_number', 5);
             
-            $table->foreign('type_id')->references('type_id')->on('room_types');
-            $table->foreign('cinema_id')->references('cinema_id')->on('cinemas');
+            $table->foreign('type_id')->references('id')->on('room_types');
+            $table->foreign('cinema_id')->references('id')->on('cinemas');
             $table->timestamps();
         });
+        
+        DB::statement('ALTER TABLE  users ALTER COLUMN id SET DEFAULT uuid_generate_v4();');
     }
 
     /**

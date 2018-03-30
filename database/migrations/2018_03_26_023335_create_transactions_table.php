@@ -14,18 +14,21 @@ class CreateTransactionsTable extends Migration
     public function up()
     {
         Schema::create('transactions', function (Blueprint $table) {
-            $table->increments('transaction_id'); // transaction_id
-            $table->unsignedInteger('customer_id');
-            $table->unsignedInteger('schedule_id');
+            $table->uuid('id'); // transaction_id
+            $table->uuid('user_id');
+            $table->uuid('schedule_id');
             $table->tinyInteger('quantity');
             $table->integer('total_price');
-            $table->string('promo_id');
+            $table->uuid('promo_id');
             
-            $table->foreign('customer_id')->references('user_id')->on('users');
-            $table->foreign('schedule_id')->references('schedule_id')->on('schedules');
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('schedule_id')->references('id')->on('schedules');
+            $table->foreign('promo_id')->references('id')->on('promo');
 
             $table->timestamps();
         });
+        
+        DB::statement('ALTER TABLE  users ALTER COLUMN id SET DEFAULT uuid_generate_v4();');
     }
 
     /**

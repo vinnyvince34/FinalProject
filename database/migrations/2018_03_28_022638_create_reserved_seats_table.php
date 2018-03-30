@@ -14,9 +14,10 @@ class CreateReservedSeatsTable extends Migration
     public function up()
     {
         Schema::create('reserved_seats', function (Blueprint $table) {
-            $table->unsignedInteger('seat_id');
-            $table->unsignedInteger('transaction_id');
-            $table->unsignedInteger('schedule_id');
+            $table->uuid('id');
+            $table->uuid('seat_id');
+            $table->uuid('transaction_id');
+            $table->uuid('schedule_id');
             
             $table->foreign('seat_id')->references('seat_id')->on('all_seats');
             $table->foreign('transaction_id')->references('transaction_id')->on('transactions');

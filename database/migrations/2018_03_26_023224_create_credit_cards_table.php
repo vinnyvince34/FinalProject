@@ -15,16 +15,18 @@ class CreateCreditCardsTable extends Migration
     {
         Schema::create('credit_cards', function (Blueprint $table) {
             $table->string('id', 8); // first 8 digits; pake credit card number
-            $table->unsignedInteger('user_id');
+            $table->uuid('user_id');
             $table->string('first_name');
             $table->string('last_name');
             $table->string('address');
             $table->string('zip_code');
             $table->string('city');
             
-            $table->foreign('user_id')->references('user_id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
+        
+        DB::statement('ALTER TABLE  users ALTER COLUMN id SET DEFAULT uuid_generate_v4();');
     }
 
     /**

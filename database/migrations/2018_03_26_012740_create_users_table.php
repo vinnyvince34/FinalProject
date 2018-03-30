@@ -14,19 +14,25 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->increments('user_id');
+            $table->uuid('id');
             $table->unsignedInteger('preferred_cinema_id');
             $table->string('name');
             $table->string('gender', 1);
             $table->date('birth_date');
             $table->string('phone_number');
             $table->string('city');
-            $table->string('email');
-            $table->string('password');
+            $table->string('email')->unique();
+            $table->string('password'); 
             
-            $table->foreign('preferred_cinema_id')->references('cinema_id')->on('cinemas');
+            $table->primary('id');
+            $table->foreign('preferred_cinema_id')
+                ->references('id')
+                ->on('cinemas');
+            
             $table->timestamps();
         });
+        
+        DB::statement('ALTER TABLE  users ALTER COLUMN id SET DEFAULT uuid_generate_v4();');
     }
 
     /**

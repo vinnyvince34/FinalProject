@@ -14,12 +14,15 @@ class CreateRoomTypesTable extends Migration
     public function up()
     {
         Schema::create('room_types', function (Blueprint $table) {
-            $table->increments('type_id');
+            $table->uuid('id');
             $table->string('type_name');
             $table->integer('weekday_price');
             $table->integer('weekend_price');
+            
             $table->timestamps();
         });
+        
+        DB::statement('ALTER TABLE  users ALTER COLUMN id SET DEFAULT uuid_generate_v4();');
     }
 
     /**
