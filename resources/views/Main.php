@@ -12,16 +12,36 @@
 <style>
     @font-face {
         font-family: logoFont;
-        src: url(Englebert-Regular.ttf)
+        src: url(assets/fonts/Englebert-Regular.ttf);
     }
 
-    footer {
-      text-align: center;
+    @font-face {
+      font-family: navbarFont;
+      src: url(assets/fonts/Hagin-Caps-Medium.otf);
+    }
+
+    @font-face {
+      font-family: searchFont;
+      src: url(assets/fonts/Hagin-Caps-Thin.otf);
+    }
+
+    body {
+      background-size: cover;
     }
 
     .logo {
       font-family: logoFont;
-      font-size: 32px;
+      font-size: 48px;
+    }
+
+    .navs {
+      font-family: navbarFont;
+      font-size: 26px;
+    }
+
+    .search {
+      font-family: searchFont;
+      font-size: 20px;
     }
 
     .logoFooter {
@@ -30,6 +50,11 @@
 
     .ads {
       width: 100%;
+    }
+
+    .adImages {
+      width: 250px;
+      height: 300px;
     }
 
     .view {
@@ -108,7 +133,7 @@
         }
     }
 </script>
-<body style="background-color: #27363b">
+<body background="../img/images/bg.jpg">
 <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width:100%">
     <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -133,14 +158,14 @@
         </div>
 
         <div class="item" align="middle" style="height:700px">
-            <img src="Mov3.jpg" style="position:absolute; top:-90%">
+            <img src="Mov3.jpg" style="width: 120%; position:absolute; top:-90%">
             <div class="carousel-caption">
                 <h3>Star Wars: Revenge of the Jedi</h3>
             </div>
         </div>
 
         <div class="item" align="middle" style="height:700px">
-            <img src="Mov4.jpg" style="position:absolute; top:-20%">
+            <img src="Mov4.jpg" style="width: 120%; position:absolute; top:-20%">
             <div class="carousel-caption">
                 <h3>Back From the Future</h3>
             </div>
@@ -165,14 +190,14 @@
           <li class="view zoom">
               <a href="#myCarousel"><span class="glyphicon glyphicon-home"></span></a>
           </li>
-          <li class="view zoom">
+          <li class="navs view zoom">
               <a href="#mov">Movies</a>
           </li>
-          <li class="view zoom">
+          <li class="navs view zoom">
               <a href="#toggleButton">Cinema</a>
           </li>
         </ul>
-        <ul class="nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav navbar-right navs view zoom">
             <li>
                 <a href="User.php">
                     <span class="glyphicon glyphicon-user"></span> User</a>
@@ -183,7 +208,7 @@
 <nav class="navbar navbar-inverse">
   <div class="container-search">
     <ul class="nav navbar-nav">
-      <li class="nav-item dropdown">
+      <li class="nav-item dropdown search">
        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
          Select Movie...
        </a>
@@ -193,7 +218,7 @@
          <a class="dropdown-item" href="#">Something else here</a>
        </div>
      </li>
-     <li class="nav-item dropdown">
+     <li class="nav-item dropdown search">
       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Select City...
       </a>
@@ -246,6 +271,41 @@
     </div>
     <br>
     <a id="toggleButton" onclick="Show()" href="javascript:void(0);">See More</a>
+    <hr>
+    <h2 id="mov" style="text-align:center">Coming Soon</h2>
+    <hr>
+    <div class="row" style="width:100%" align="center">
+        <div class="col-sm-3">
+            <a href="Movie.php"><img src="Mov5.jpg" class="view"></a>
+        </div>
+        <div class="col-sm-3">
+            <img src="Mov6.jpg" class="view">
+        </div>
+        <div class="col-sm-3">
+            <img src="Mov7.jpg" class="view">
+        </div>
+        <div class="col-sm-3">
+            <img src="Mov8.jpg" class="view">
+        </div>
+        <br>
+    <br>
+    </div>
+    <div id="hide" style="padding:10pt 0pt 0pt 0pt">
+        <div class="row" style="width:100%" align="center">
+            <div class="col-sm-3">
+                <img src="Mov9.jpg" class="view">
+            </div>
+            <div class="col-sm-3">
+                <img src="Mov10.jpg" class="view">
+            </div>
+            <div class="col-sm-3">
+                <img src="Mov11.jpg" class="view">
+            </div>
+            <div class="col-sm-3">
+                <img src="Mov12.jpg" class="view">
+            </div>
+        </div>
+    </div>
     <h2 style="text-align:center">Cinemas</h2>
     <hr>
     <div class="row" style="width:100%" align="center">
@@ -255,6 +315,7 @@
         <div class="col-sm-6">
             <img src="XXI.png" class="view">
     </div>
+    <hr>
     <br>
     <h2 id="promo" style="text-align:center">Promotion</h2>
     <hr style="width:101%">
@@ -271,25 +332,18 @@
 
         <div class="carousel-inner">
             <div class="item active" align="middle">
-                <img src="ad1.png">
+                <img src="../img/images/ad1.png" class="adImages">
             </div>
-        </div>
 
-        <div class="carousel-inner">
             <div class="item" align="middle">
-                <img src="ad2png">
+                <img src="../img/images/ad2.png" class="adImages">
             </div>
-        </div>
-
-        <div class="carousel-inner">
             <div class="item" align="middle">
-                <img src="ad3.png">
+                <img src="../img/images/ad3.png" class="adImages">
             </div>
-        </div>
 
-        <div class="carousel-inner">
             <div class="item" align="middle">
-                <img src="ad4.png">
+                <img src="../img/images/ad4.png" class="adImages">
             </div>
         </div>
 
