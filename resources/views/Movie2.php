@@ -75,10 +75,10 @@
         <table cellspacing="10" style="position:relative; left:25%">
             <tr>
                 <td>
-                    <img src="Mov5.jpg" class="view">
+                    <img src="../img/images/Mov6.jpg" class="view">
                 </td>
                 <td>
-                    <iframe width="500" height="350" src="https://www.youtube.com/embed/gCcx85zbxz4">
+                    <iframe width="500" height="350" src="https://www.youtube.com/embed/BdJKm16Co6M">
                     </iframe>
                 </td>
             </tr>
@@ -87,9 +87,9 @@
         <table style="position:relative; left:25%; color:aliceblue">
             <tr>
                 <td style="width:750px">
-                    Officer K (Ryan Gosling), a new blade runner for the Los Angeles Police Department, unearths a long-buried secret that has
-                    the potential to plunge what's left of society into chaos. His discovery leads him on a quest to find Rick Deckard
-                    (Harrison Ford), a former blade runner who's been missing for 30 years.
+                    An insomniac office worker, looking for a way to change his life,
+                    crosses paths with a devil-may-care soapmaker, forming an underground
+                    fight club that evolves into something much, much more.
                 </td>
             </tr>
         </table>

@@ -5,18 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Mytix-User</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/js/bootstrap-datetimepicker.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/css/bootstrap-datetimepicker.min.css">
+
+
 </head>
 <style>
+
     @font-face {
         font-family: logoFont;
         src: url(Englebert-Regular.ttf)
     }
-    
+
+    @font-face {
+      font-family: navbarFont;
+      src: url(assets/fonts/Hagin-Caps-Medium.otf);
+    }
+
+    @font-face {
+      font-family: searchFont;
+      src: url(assets/fonts/Hagin-Caps-Thin.otf);
+    }
+
+    .logo {
+      font-family: logoFont;
+      font-size: 48px;
+    }
+
+    .navs {
+      font-family: navbarFont;
+      font-size: 26px;
+    }
+
+    .search {
+      font-family: searchFont;
+      font-size: 20px;
+    }
+
     .tab {
         overflow: hidden;
         border: 1px solid #ccc;
@@ -49,7 +83,7 @@
 
     input{
         color: aliceblue;
-        background-color: #27363b;
+        background-color: #6699ff;
         border: none;
         border-bottom: 2px solid aliceblue;
         transition: width 0.4s ease-in-out;
@@ -59,6 +93,7 @@
     input:focus{
         width: 100%;
     }
+
 </style>
 <script>
     function tabbed(evt, tab) {
@@ -82,21 +117,21 @@
         tabbed(event, 'LogIn');
     };
 </script>
-<body style="background-color: #27363b">
+<body style="background-color: #6699ff">
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand logo" href="Main.php">JAVTix</a>
             </div>
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav navs">
                 <li>
-                    <a href="Main.php">Home</a>
+                    <a href="Main.php"><span class="glyphicon glyphicon-home"></span></a>
                 </li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right navs">
                 <li>
                     <a href="User.php">
-                        <span class="glyphicon glyphicon-user"></span> User</a>
+                        <span class="glyphicon glyphicon-user"></span>User</a>
                 </li>
             </ul>
         </div>
@@ -121,6 +156,46 @@
                 <input type="password" value="" name="password" style="color:black" require>
                 <h5>Phone Number</h5>
                 <input type="text" value="" name="phone" style="color:black" require>
+                <h5>Gender</h5>
+                <div class="dropdown">
+                  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Gender
+                  <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Male</a></li>
+                    <li><a href="#">Female</a></li>
+                  </ul>
+                </div>
+                <h5>Birthdate</h5>
+                <div class="container" style="color: black;">
+                  <div class="row">
+                    <div class='col-sm-6'>
+                      <div class="form-group">
+                        <div class='input-group date' id='datetimepicker1'>
+                          <input type='text' class="form-control" />
+                          <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <script>
+                $(function() {
+                  $('#datetimepicker1').datetimepicker({
+                      format: 'DD/MM/YYYY'
+                    });
+                  });
+                </script>
+                <h5>City</h5>
+                <div class="dropdown">
+                  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select City
+                  <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">test</a></li>
+                    <li><a href="#">test2</a></li>
+                  </ul>
+                </div>
                 <br><br>
                 <input type="submit" value="Submit" name="Submit" style="color:black; width:7%; position:relative; left:47%; background-color: grey; border: 2px solid black">
             </form>
@@ -138,8 +213,5 @@
             </form>
         </div>
     </div>
-    <footer>
-
-    </footer>
 </body>
 </html>
