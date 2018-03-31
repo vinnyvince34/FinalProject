@@ -14,7 +14,7 @@ class CreateMoviesTable extends Migration
     public function up()
     {
         Schema::create('movies', function (Blueprint $table) {
-            $table->increments('movie_id');
+            $table->uuid('id');
             $table->string('movie_name');
             $table->integer('duration');
             $table->string('casts');
@@ -26,6 +26,8 @@ class CreateMoviesTable extends Migration
             $table->string('trailer_url');
             $table->timestamps();
         });
+        
+        DB::statement('ALTER TABLE  users ALTER COLUMN id SET DEFAULT uuid_generate_v4();');
     }
 
     /**

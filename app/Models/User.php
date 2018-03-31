@@ -4,10 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Transaction extends Model
+class User extends Model
 {
-    protected $table = "transactions";
-    protected $fillable = ['user_id', 'schedule_id', 'quantity', 'total_price', 'promo_id'];
+    protected $table = "users";
+    protected $fillable = ['preferred_cinema_id', 'name', 'gender', 'birth_date', 'phone_number', 'city', 'email', 'password'];
     
     protected $primaryKey = "id";
     

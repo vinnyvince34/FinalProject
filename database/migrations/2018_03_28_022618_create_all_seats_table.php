@@ -14,7 +14,7 @@ class CreateAllSeatsTable extends Migration
     public function up()
     {
         Schema::create('all_seats', function (Blueprint $table) {
-            $table->increments('seat_id');
+            $table->uuid('id');
             $table->string('seat_number');
             $table->unsignedInteger('theatre_id');
             
