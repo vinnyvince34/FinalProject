@@ -38,9 +38,9 @@
 
     .seats{
         position: relative;
-        left: 26.5%;
+        left: 21.5%;
         text-align: center;
-        border-spacing: 100px 50px;
+        border-spacing: 100px 20px;
         border-collapse: separate;
     }
 </style>
@@ -192,11 +192,12 @@
                 <h4>Seats</h4>
                 <table class="seats">
                     <tr ng-repeat="x in seats">
-                        <td>{{ x.seatA }}</td>
-                        <td>{{ x.seatB }}</td>
-                        <td>{{ x.seatC }}</td>
-                        <td>{{ x.seatD }}</td>
-                        <td>{{ x.seatC }}</td>
+                        <td>Screen</td>
+                        <td><input type="checkbox" name="chosen" value="chosen">{{ x.seatA }}</td>
+                        <td><input type="checkbox" name="chosen" value="chosen">{{ x.seatB }}</td>
+                        <td><input type="checkbox" name="chosen" value="chosen">{{ x.seatC }}</td>
+                        <td><input type="checkbox" name="chosen" value="chosen">{{ x.seatD }}</td>
+                        <td><input type="checkbox" name="chosen" value="chosen">{{ x.seatC }}</td>
                     </tr>  
                 </table>
                 <h5>Cinema</h5>
@@ -218,7 +219,6 @@
     <br>
     <br>
     <footer>
-
     </footer>
 </body>
 </html>
