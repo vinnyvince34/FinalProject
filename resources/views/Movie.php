@@ -33,6 +33,13 @@
         border: none;
         border-bottom: 2px solid aliceblue;
     }
+    .seats{
+        position: relative;
+        left: 21.5%;
+        text-align: center;
+        border-spacing: 100px 20px;
+        border-collapse: separate;
+    }
 </style>
 <script>
     var timeByCategory = {
@@ -170,6 +177,17 @@
             <form action="Payment.php">
                 <h5>Number of People</h5>
                 <input type="number" value="" name="numberPeople" style="color:black" require>
+                <h4>Seats</h4>
+                <table class="seats">
+                    <tr ng-repeat="x in seats">
+                        <td>Screen</td>
+                        <td><input type="checkbox" name="chosen" value="chosen">{{ x.seatA }}</td>
+                        <td><input type="checkbox" name="chosen" value="chosen">{{ x.seatB }}</td>
+                        <td><input type="checkbox" name="chosen" value="chosen">{{ x.seatC }}</td>
+                        <td><input type="checkbox" name="chosen" value="chosen">{{ x.seatD }}</td>
+                        <td><input type="checkbox" name="chosen" value="chosen">{{ x.seatC }}</td>
+                    </tr>  
+                </table>
                 <h5>Cinema</h5>
                 <select name="cinemaSelect" id="cinemaSelect" style="color:black" onChange="changetime(this.value);">
                     <option value="" style="color:grey" disabled selected>Select</option>
@@ -189,7 +207,6 @@
     <br>
     <br>
     <footer>
-
     </footer>
 </body>
 </html>
