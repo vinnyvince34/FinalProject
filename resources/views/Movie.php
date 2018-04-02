@@ -6,6 +6,8 @@
     <title>Mytix-Movie</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
@@ -33,8 +35,27 @@
         border: none;
         border-bottom: 2px solid aliceblue;
     }
+
+    .seats{
+        position: relative;
+        left: 21.5%;
+        text-align: center;
+        border-spacing: 100px 20px;
+        border-collapse: separate;
+    }
 </style>
 <script>
+    var app = angular.module("myApp", []);
+    app.controller("myCtrl", function($scope) {
+    $scope.seats = [
+        {seatA:'A1',seatB:'B1',seatC:'C1',seatD:'D1',seatE:'E1'},
+        {seatA:'A2',seatB:'B2',seatC:'C2',seatD:'D2',seatE:'E2'},
+        {seatA:'A3',seatB:'B3',seatC:'C3',seatD:'D3',seatE:'E3'},
+        {seatA:'A4',seatB:'B4',seatC:'C4',seatD:'D4',seatE:'E4'},
+        {seatA:'A5',seatB:'B5',seatC:'C5',seatD:'D5',seatE:'E5'}
+        ];
+    });
+
     var timeByCategory = {
     xxi: ["10:00 - 12:30", "13:00 - 15:30", "16:00 - 18:30", "19:00 - 21:30","22:00 - 00:30"],
     cgv: ["10:10 - 12:40", "13:10 - 15:40", "16:10 - 18:40", "19:10 - 21:40","22:10 - 00:40"],
@@ -51,7 +72,7 @@
         }
     }
 </script>
-<body style="background-color: #27363b">
+<body ng-app="myApp" ng-controller="myCtrl" style="background-color: #27363b">
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -168,8 +189,17 @@
         <div style="text-align:center">
             <h3>Interested?</h3>
             <form action="Payment.php">
-                <h5>Number of People</h5>
-                <input type="number" value="" name="numberPeople" style="color:black" require>
+                <h4>Seats</h4>
+                <table class="seats">
+                    <tr ng-repeat="x in seats">
+                        <td>Screen</td>
+                        <td><input type="checkbox" name="chosen" value="chosen">{{ x.seatA }}</td>
+                        <td><input type="checkbox" name="chosen" value="chosen">{{ x.seatB }}</td>
+                        <td><input type="checkbox" name="chosen" value="chosen">{{ x.seatC }}</td>
+                        <td><input type="checkbox" name="chosen" value="chosen">{{ x.seatD }}</td>
+                        <td><input type="checkbox" name="chosen" value="chosen">{{ x.seatC }}</td>
+                    </tr>  
+                </table>
                 <h5>Cinema</h5>
                 <select name="cinemaSelect" id="cinemaSelect" style="color:black" onChange="changetime(this.value);">
                     <option value="" style="color:grey" disabled selected>Select</option>
@@ -189,7 +219,6 @@
     <br>
     <br>
     <footer>
-
     </footer>
 </body>
 </html>
