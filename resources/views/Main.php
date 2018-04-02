@@ -6,8 +6,6 @@
     <title>Mytix-Main</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
@@ -46,6 +44,11 @@
       font-size: 20px;
     }
 
+    .movieHeader {
+      font-family: logoFont;
+      font-size: 36px;
+    }
+
     .logoFooter {
       pointer-events: none;
     }
@@ -57,6 +60,11 @@
     .adImages {
       width: 250px;
       height: 300px;
+    }
+
+    .cinemaImages {
+      width: 50%;
+      height: 50%;
     }
 
     .view {
@@ -88,8 +96,8 @@
 
     #toggleButton
     {
-        position:relative; left:50%;
-        color:aliceblue;
+        position:absolute;
+        text-align: center;
     }
 
     a:link
@@ -146,20 +154,21 @@
 
     <div class="carousel-inner">
         <div class="item active" align="middle" style="height:700px">
-            <img src="Mov1.jpg" style="width:110%; position:absolute; top:-30%">
+            <img src="../img/images/Mov1.jpg" style="width:110%; position:absolute; top:-30%">
             <div class="carousel-caption">
                 <h3>Star Wars: The New Hope</h3>
             </div>
         </div>
 
         <div class="item" align="middle" style="height:700px;">
-            <img src="Mov2.jpg" style="width:120%; position:absolute; top:-80%">
+            <img src="../img/images/Mov2.jpg" style="width:120%; position:absolute; top:-80%">
             <div class="carousel-caption">
                 <h3>Star Wars: The Empire Strikes Back</h3>
             </div>
         </div>
 
         <div class="item" align="middle" style="height:700px">
+            <img src="../img/images/Mov3.jpg" style="width: 120%; position:absolute; top:-90%">
             <img src="Mov3.jpg" style="width: 120%; position:absolute; top:-90%">
             <div class="carousel-caption">
                 <h3>Star Wars: Revenge of the Jedi</h3>
@@ -167,6 +176,7 @@
         </div>
 
         <div class="item" align="middle" style="height:700px">
+            <img src="../img/images/Mov4.jpg" style="width: 120%; position:absolute; top:-20%">
             <img src="Mov4.jpg" style="width: 120%; position:absolute; top:-20%">
             <div class="carousel-caption">
                 <h3>Back From the Future</h3>
@@ -188,7 +198,7 @@
         <div class="navbar-header">
             <a class="navbar-brand logo" href="Main.php">JAVTix</a>
         </div>
-        <ul class="nav navbar-nav">
+        <ul class="nav navbar-nav navs">
           <li class="view zoom">
               <a href="#myCarousel"><span class="glyphicon glyphicon-home"></span></a>
           </li>
@@ -237,41 +247,64 @@
   </div>
 </nav>
 <div style="color:aliceblue">
-    <h2 id="mov" style="text-align:center">Now Playing</h2>
+    <h2 id="mov" class="movieHeader" style="text-align:center">Now Playing</h2>
     <hr>
     <div class="row" style="width:100%" align="center">
         <div class="col-sm-3">
-            <a href="Movie.php"><img src="Mov5.jpg" class="view"></a>
+            <a href="Movie.php"><img src="../img/images/Mov5.jpg" class="view"></a>
         </div>
         <div class="col-sm-3">
-            <img src="Mov6.jpg" class="view">
+            <a href="Movie2.php"><img src="../img/images/Mov6.jpg" class="view"></a>
         </div>
         <div class="col-sm-3">
-            <img src="Mov7.jpg" class="view">
+            <a href="Movie3.php"><img src="../img/images/Mov7.jpg" class="view"></a>
         </div>
         <div class="col-sm-3">
-            <img src="Mov8.jpg" class="view">
+            <a href="Movie4.php"><img src="../img/images/Mov8.jpg" class="view"></a>
         </div>
         <br>
     <br>
     </div>
-    <div id="hide" style="padding:10pt 0pt 0pt 0pt">
+    <div class="collapse" id="more" style="padding:10pt 0pt 0pt 0pt">
         <div class="row" style="width:100%" align="center">
             <div class="col-sm-3">
-                <img src="Mov9.jpg" class="view">
+                <a href="Movie5.php"><img src="../img/images/Mov9.jpg" class="view"></a>
             </div>
             <div class="col-sm-3">
-                <img src="Mov10.jpg" class="view">
+                <a href="Movie6.php"><img src="../img/images/Mov10.jpg" class="view"></a>
             </div>
             <div class="col-sm-3">
-                <img src="Mov11.jpg" class="view">
+                <a href="Movie7.php"><img src="../img/images/Mov11.jpg" class="view"></a>
             </div>
             <div class="col-sm-3">
-                <img src="Mov12.jpg" class="view">
+                <a href="Movie8.php"><img src="../img/images/Mov12.jpg" class="view"></a>
             </div>
         </div>
     </div>
     <br>
+
+    <div class="text-center">
+      <a class="btn btn-primary" role="button" data-toggle="collapse" href="#more">
+        See more
+      </a>
+    </div>
+    <!-- JANGAN LUPA INI MAU DIGANTI -->
+    <!-- <a id="toggleButton" class="btn btn-secondary" role="button" onclick="Show()" href="javascript:void(0);">See More</a> -->
+    <hr>
+    <h2 id="mov" class="movieHeader" style="text-align:center">Coming Soon</h2>
+    <hr>
+    <div class="row" style="width:100%" align="center">
+        <div class="col-sm-3">
+            <img src="../img/images/Mov5.jpg" class="view">
+        </div>
+        <div class="col-sm-3">
+            <img src="../img/images/Mov6.jpg" class="view">
+        </div>
+        <div class="col-sm-3">
+            <img src="../img/images/Mov7.jpg" class="view">
+        </div>
+        <div class="col-sm-3">
+            <img src="../img/images/Mov8.jpg" class="view">
     <a id="toggleButton" onclick="Show()" href="javascript:void(0);">See More</a>
     <hr>
     <h2 id="mov" style="text-align:center">Coming Soon</h2>
@@ -291,6 +324,27 @@
         </div>
         <br>
     <br>
+    </div>
+    <div class="collapse" id="more2" style="padding:10pt 0pt 0pt 0pt">
+        <div class="row" style="width:100%" align="center">
+            <div class="col-sm-3">
+                <img src="../img/images/Mov9.jpg" class="view">
+            </div>
+            <div class="col-sm-3">
+                <img src="../img/images/Mov10.jpg" class="view">
+            </div>
+            <div class="col-sm-3">
+                <img src="../img/images/Mov11.jpg" class="view">
+            </div>
+            <div class="col-sm-3">
+                <img src="../img/images/Mov12.jpg" class="view">
+            </div>
+        </div>
+    </div>
+    <div class="text-center">
+      <a class="btn btn-primary" role="button" data-toggle="collapse" href="#more2">
+        See more
+      </a>
     </div>
     <div id="hide" style="padding:10pt 0pt 0pt 0pt">
         <div class="row" style="width:100%" align="center">
@@ -312,10 +366,10 @@
     <hr>
     <div class="row" style="width:100%" align="center">
         <div class="col-sm-6">
-            <img src="CGV.png" class="view">
+            <a href="https://www.instagram.com/cgv.id/" target="_blank"><img src="../img/images/CGV.png" class="view cinemaImages"></a>
         </div>
         <div class="col-sm-6">
-            <img src="XXI.png" class="view">
+            <a href="https://www.facebook.com/CinemaXXI?ref=ts&fref=ts" target="_blank"><img src="../img/images/XXI.png" class="view cinemaImages"></a>
     </div>
     <hr>
     <br>

@@ -23,6 +23,31 @@
         src: url(Englebert-Regular.ttf)
     }
 
+    @font-face {
+      font-family: navbarFont;
+      src: url(assets/fonts/Hagin-Caps-Medium.otf);
+    }
+
+    @font-face {
+      font-family: searchFont;
+      src: url(assets/fonts/Hagin-Caps-Thin.otf);
+    }
+
+    .logo {
+      font-family: logoFont;
+      font-size: 48px;
+    }
+
+    .navs {
+      font-family: navbarFont;
+      font-size: 26px;
+    }
+
+    .search {
+      font-family: searchFont;
+      font-size: 20px;
+    }
+
     .tab {
         overflow: hidden;
         border: 1px solid #ccc;
@@ -95,15 +120,15 @@
             <div class="navbar-header">
                 <a class="navbar-brand logo" href="Main.php">JAVTix</a>
             </div>
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav navs">
                 <li>
-                    <a href="Main.php">Home</a>
+                    <a href="Main.php"><span class="glyphicon glyphicon-home"></span></a>
                 </li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right navs">
                 <li>
                     <a href="User.php">
-                        <span class="glyphicon glyphicon-user"></span> User</a>
+                        <span class="glyphicon glyphicon-user"></span>User</a>
                 </li>
             </ul>
         </div>
@@ -138,6 +163,7 @@
                   </ul>
                 </div>
                 <h5>Birthdate</h5>
+                <div class="container" style="color: black;">
                 <div class="container">
                   <div class="row">
                     <div class='col-sm-6'>

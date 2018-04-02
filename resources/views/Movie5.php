@@ -33,13 +33,6 @@
         border: none;
         border-bottom: 2px solid aliceblue;
     }
-    .seats{
-        position: relative;
-        left: 21.5%;
-        text-align: center;
-        border-spacing: 100px 20px;
-        border-collapse: separate;
-    }
 </style>
 <script>
     var timeByCategory = {
@@ -82,10 +75,10 @@
         <table cellspacing="10" style="position:relative; left:25%">
             <tr>
                 <td>
-                    <img src="Mov5.jpg" class="view">
+                    <img src="../img/images/Mov9.jpg" class="view">
                 </td>
                 <td>
-                    <iframe width="500" height="350" src="https://www.youtube.com/embed/gCcx85zbxz4">
+                    <iframe width="500" height="350" src="https://www.youtube.com/embed/JIIgXEGAZgE">
                     </iframe>
                 </td>
             </tr>
@@ -94,9 +87,8 @@
         <table style="position:relative; left:25%; color:aliceblue">
             <tr>
                 <td style="width:750px">
-                    Officer K (Ryan Gosling), a new blade runner for the Los Angeles Police Department, unearths a long-buried secret that has
-                    the potential to plunge what's left of society into chaos. His discovery leads him on a quest to find Rick Deckard
-                    (Harrison Ford), a former blade runner who's been missing for 30 years.
+                    A vengeful fairy is driven to curse an infant princess,
+                    only to discover that the child may be the one person who can restore peace to their troubled land.
                 </td>
             </tr>
         </table>
@@ -177,17 +169,6 @@
             <form action="Payment.php">
                 <h5>Number of People</h5>
                 <input type="number" value="" name="numberPeople" style="color:black" require>
-                <h4>Seats</h4>
-                <table class="seats">
-                    <tr ng-repeat="x in seats">
-                        <td>Screen</td>
-                        <td><input type="checkbox" name="chosen" value="chosen">{{ x.seatA }}</td>
-                        <td><input type="checkbox" name="chosen" value="chosen">{{ x.seatB }}</td>
-                        <td><input type="checkbox" name="chosen" value="chosen">{{ x.seatC }}</td>
-                        <td><input type="checkbox" name="chosen" value="chosen">{{ x.seatD }}</td>
-                        <td><input type="checkbox" name="chosen" value="chosen">{{ x.seatC }}</td>
-                    </tr>  
-                </table>
                 <h5>Cinema</h5>
                 <select name="cinemaSelect" id="cinemaSelect" style="color:black" onChange="changetime(this.value);">
                     <option value="" style="color:grey" disabled selected>Select</option>
@@ -207,6 +188,7 @@
     <br>
     <br>
     <footer>
+
     </footer>
 </body>
 </html>
