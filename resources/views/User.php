@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Mytix-User</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -17,30 +17,38 @@
 
 </head>
 <style>
-
     @font-face {
         font-family: logoFont;
-        src: url(Englebert-Regular.ttf)
+        src: url(../views/assets/fonts/SIMPLIFICA.ttf);
     }
 
     @font-face {
       font-family: navbarFont;
-      src: url(assets/fonts/Hagin-Caps-Medium.otf);
+      src: url(../views/assets/fonts/SIMPLIFICA.ttf);
     }
 
     @font-face {
       font-family: searchFont;
-      src: url(assets/fonts/Hagin-Caps-Thin.otf);
+      src: url(../views/assets/fonts/SIMPLIFICA.ttf);
+    }
+
+    body {
+      background-size: cover;
     }
 
     .logo {
       font-family: logoFont;
-      font-size: 48px;
+      font-size: 36px;
     }
 
     .navs {
       font-family: navbarFont;
       font-size: 26px;
+    }
+
+    .Header {
+      font-family: logoFont;
+      font-size: 36px;
     }
 
     .search {
@@ -80,14 +88,14 @@
 
     input{
         color: aliceblue;
-        background-color: #6699ff;
+        background-color: #27363b;
         border: none;
         border-bottom: 2px solid aliceblue;
-        transition: width 0.4s ease-in-out;
-        -webkit-transition: width 0.4s ease-in-out;
     }
 
     input:focus{
+        transition: width 0.4s ease-in-out;
+        -webkit-transition: width 0.4s ease-in-out;
         width: 100%;
     }
 
@@ -114,21 +122,27 @@
         tabbed(event, 'LogIn');
     };
 </script>
-<body style="background-color: #6699ff">
+<body style="background-color: #27363b">
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand logo" href="Main.php">JAVTix</a>
             </div>
             <ul class="nav navbar-nav navs">
-                <li>
-                    <a href="Main.php"><span class="glyphicon glyphicon-home"></span></a>
-                </li>
+            <li class="view zoom">
+            <a href="#myCarousel"><span class="glyphicon glyphicon-home"></span></a>
+            </li>
+            <li class="navs view zoom">
+                <a href="#mov">Movies</a>
+            </li>
+            <li class="navs view zoom">
+                <a href="#toggleButton">Cinema</a>
+            </li>
             </ul>
-            <ul class="nav navbar-nav navbar-right navs">
+            <ul class="nav navbar-nav navbar-right navs view zoom">
                 <li>
                     <a href="User.php">
-                        <span class="glyphicon glyphicon-user"></span>User</a>
+                        <span class="glyphicon glyphicon-user"></span> User</a>
                 </li>
             </ul>
         </div>
@@ -154,46 +168,15 @@
                 <h5>Phone Number</h5>
                 <input type="text" value="" name="phone" style="color:black" require>
                 <h5>Gender</h5>
-                <div class="dropdown">
-                  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Gender
-                  <span class="caret"></span></button>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Male</a></li>
-                    <li><a href="#">Female</a></li>
-                  </ul>
-                </div>
-                <h5>Birthdate</h5>
-                <div class="container" style="color: black;">
-                <div class="container">
-                  <div class="row">
-                    <div class='col-sm-6'>
-                      <div class="form-group">
-                        <div class='input-group date' id='datetimepicker1'>
-                          <input type='text' class="form-control" />
-                          <span class="input-group-addon">
-                            <span class="glyphicon glyphicon-calendar"></span>
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <script>
-                $(function() {
-                  $('#datetimepicker1').datetimepicker({
-                      format: 'DD/MM/YYYY'
-                    });
-                  });
-                </script>
+                <select name="" id="" style="color:black">
+                    <option value="" selected disabled>Select</option>
+                    <option value="">Male</option>
+                    <option value="">Female</option>
+                </select>
+                <h5>Birth date</h5>
+                <input type="date" name="bday"><br>
                 <h5>City</h5>
-                <div class="dropdown">
-                  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select City
-                  <span class="caret"></span></button>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">test</a></li>
-                    <li><a href="#">test2</a></li>
-                  </ul>
-                </div>
+                <input type="text" name="city"><br>
                 <br><br>
                 <input type="submit" value="Submit" name="Submit" style="color:black; width:7%; position:relative; left:47%; background-color: grey; border: 2px solid black">
             </form>
