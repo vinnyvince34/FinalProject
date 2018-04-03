@@ -5,18 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Mytix-User</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/js/bootstrap-datetimepicker.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/css/bootstrap-datetimepicker.min.css">
+
+
 </head>
 <style>
     @font-face {
         font-family: logoFont;
-        src: url(Englebert-Regular.ttf)
+        src: url(../views/assets/fonts/SIMPLIFICA.ttf);
     }
-    
+
+    @font-face {
+      font-family: navbarFont;
+      src: url(../views/assets/fonts/SIMPLIFICA.ttf);
+    }
+
+    @font-face {
+      font-family: searchFont;
+      src: url(../views/assets/fonts/SIMPLIFICA.ttf);
+    }
+
+    body {
+      background-size: cover;
+    }
+
+    .logo {
+      font-family: logoFont;
+      font-size: 36px;
+    }
+
+    .navs {
+      font-family: navbarFont;
+      font-size: 26px;
+    }
+
+    .Header {
+      font-family: logoFont;
+      font-size: 36px;
+    }
+
+    .search {
+      font-family: searchFont;
+      font-size: 20px;
+    }
+
     .tab {
         overflow: hidden;
         border: 1px solid #ccc;
@@ -52,13 +91,14 @@
         background-color: #27363b;
         border: none;
         border-bottom: 2px solid aliceblue;
-        transition: width 0.4s ease-in-out;
-        -webkit-transition: width 0.4s ease-in-out;
     }
 
     input:focus{
+        transition: width 0.4s ease-in-out;
+        -webkit-transition: width 0.4s ease-in-out;
         width: 100%;
     }
+
 </style>
 <script>
     function tabbed(evt, tab) {
@@ -88,12 +128,18 @@
             <div class="navbar-header">
                 <a class="navbar-brand logo" href="Main.php">JAVTix</a>
             </div>
-            <ul class="nav navbar-nav">
-                <li>
-                    <a href="Main.php">Home</a>
-                </li>
+            <ul class="nav navbar-nav navs">
+            <li class="view zoom">
+            <a href="#myCarousel"><span class="glyphicon glyphicon-home"></span></a>
+            </li>
+            <li class="navs view zoom">
+                <a href="#mov">Movies</a>
+            </li>
+            <li class="navs view zoom">
+                <a href="#toggleButton">Cinema</a>
+            </li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right navs view zoom">
                 <li>
                     <a href="User.php">
                         <span class="glyphicon glyphicon-user"></span> User</a>
@@ -121,6 +167,16 @@
                 <input type="password" value="" name="password" style="color:black" require>
                 <h5>Phone Number</h5>
                 <input type="text" value="" name="phone" style="color:black" require>
+                <h5>Gender</h5>
+                <select name="" id="" style="color:black">
+                    <option value="" selected disabled>Select</option>
+                    <option value="">Male</option>
+                    <option value="">Female</option>
+                </select>
+                <h5>Birth date</h5>
+                <input type="date" name="bday"><br>
+                <h5>City</h5>
+                <input type="text" name="city"><br>
                 <br><br>
                 <input type="submit" value="Submit" name="Submit" style="color:black; width:7%; position:relative; left:47%; background-color: grey; border: 2px solid black">
             </form>
@@ -138,8 +194,5 @@
             </form>
         </div>
     </div>
-    <footer>
-
-    </footer>
 </body>
 </html>

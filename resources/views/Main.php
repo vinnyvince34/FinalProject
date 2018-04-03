@@ -6,24 +6,48 @@
     <title>Mytix-Main</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 </head>
 <style>
     @font-face {
         font-family: logoFont;
-        src: url(Englebert-Regular.ttf)
+        src: url(../views/assets/fonts/SIMPLIFICA.ttf);
     }
 
-    footer {
-      text-align: center;
+    @font-face {
+      font-family: navbarFont;
+      src: url(../views/assets/fonts/SIMPLIFICA.ttf);
+    }
+
+    @font-face {
+      font-family: searchFont;
+      src: url(../views/assets/fonts/SIMPLIFICA.ttf);
+    }
+
+    body {
+      background-size: cover;
     }
 
     .logo {
       font-family: logoFont;
-      font-size: 32px;
+      font-size: 36px;
+    }
+
+    .navs {
+      font-family: navbarFont;
+      font-size: 26px;
+    }
+
+    .Header {
+      font-family: logoFont;
+      font-size: 36px;
+    }
+
+    .search {
+      font-family: searchFont;
+      font-size: 20px;
     }
 
     .logoFooter {
@@ -32,6 +56,16 @@
 
     .ads {
       width: 100%;
+    }
+
+    .adImages {
+      width: 250px;
+      height: 300px;
+    }
+
+    .cinemaImages {
+      width: 50%;
+      height: 50%;
     }
 
     .view {
@@ -63,8 +97,7 @@
 
     #toggleButton
     {
-        position:relative; left:50%;
-        color:aliceblue;
+        text-align: center;
     }
 
     a:link
@@ -110,160 +143,8 @@
         }
     }
 </script>
-<body style="background-color: #27363b">
-<div id="myCarousel" class="carousel slide" data-ride="carousel" style="width:100%">
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-    </ol>
-
-    <div class="carousel-inner">
-        <div class="item active" align="middle" style="height:700px">
-            <img src="Mov1.jpg" style="width:110%; position:absolute; top:-30%">
-            <div class="carousel-caption">
-                <h3>Star Wars: The New Hope</h3>
-            </div>
-        </div>
-
-        <div class="item" align="middle" style="height:700px;">
-            <img src="Mov2.jpg" style="width:120%; position:absolute; top:-80%">
-            <div class="carousel-caption">
-                <h3>Star Wars: The Empire Strikes Back</h3>
-            </div>
-        </div>
-
-        <div class="item" align="middle" style="height:700px">
-            <img src="Mov3.jpg" style="position:absolute; top:-90%">
-            <div class="carousel-caption">
-                <h3>Star Wars: Revenge of the Jedi</h3>
-            </div>
-        </div>
-
-        <div class="item" align="middle" style="height:700px">
-            <img src="Mov4.jpg" style="position:absolute; top:-20%">
-            <div class="carousel-caption">
-                <h3>Back From the Future</h3>
-            </div>
-        </div>
-    </div>
-
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right"></span>
-        <span class="sr-only">Next</span>
-    </a>
-</div>
-<nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand logo" href="Main.php">JAVTix</a>
-        </div>
-        <ul class="nav navbar-nav">
-          <li class="view zoom">
-              <a href="#myCarousel"><span class="glyphicon glyphicon-home"></span></a>
-          </li>
-          <li class="view zoom">
-              <a href="#mov">Movies</a>
-          </li>
-          <li class="view zoom">
-              <a href="#toggleButton">Cinema</a>
-          </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li>
-                <a href="User.php">
-                    <span class="glyphicon glyphicon-user"></span> User</a>
-            </li>
-        </ul>
-    </div>
-</nav>
-<nav class="navbar navbar-inverse">
-  <div class="container-search">
-    <ul class="nav navbar-nav">
-      <li class="nav-item dropdown">
-       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-         Select Movie...
-       </a>
-       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-         <a class="dropdown-item" href="#">Action</a>
-         <a class="dropdown-item" href="#">Another action</a>
-         <a class="dropdown-item" href="#">Something else here</a>
-       </div>
-     </li>
-     <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Select City...
-      </a>
-      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
-      </div>
-    </li>
-      <li>
-        <a href="#" class="btn view zoom"><span class="glyphicon glyphicon-search">Search</span></a>
-      </li>
-    </ul>
-  </div>
-</nav>
-<div style="color:aliceblue">
-    <h2 id="mov" style="text-align:center">Now Playing</h2>
-    <hr>
-    <div class="row" style="width:100%" align="center">
-        <div class="col-sm-3">
-            <a href="Movie.php"><img src="Mov5.jpg" class="view"></a>
-        </div>
-        <div class="col-sm-3">
-            <img src="Mov6.jpg" class="view">
-        </div>
-        <div class="col-sm-3">
-            <img src="Mov7.jpg" class="view">
-        </div>
-        <div class="col-sm-3">
-            <img src="Mov8.jpg" class="view">
-        </div>
-        <br>
-    <br>
-    </div>
-    <div id="hide" style="padding:10pt 0pt 0pt 0pt">
-        <div class="row" style="width:100%" align="center">
-            <div class="col-sm-3">
-                <img src="Mov9.jpg" class="view">
-            </div>
-            <div class="col-sm-3">
-                <img src="Mov10.jpg" class="view">
-            </div>
-            <div class="col-sm-3">
-                <img src="Mov11.jpg" class="view">
-            </div>
-            <div class="col-sm-3">
-                <img src="Mov12.jpg" class="view">
-            </div>
-        </div>
-    </div>
-    <br>
-    <a id="toggleButton" onclick="Show()" href="javascript:void(0);">See More</a>
-    <h2 style="text-align:center">Cinemas</h2>
-    <hr>
-    <div class="row" style="width:100%" align="center">
-        <div class="col-sm-6">
-            <img src="CGV.png" class="view">
-        </div>
-        <div class="col-sm-6">
-            <img src="XXI.png" class="view">
-    </div>
-    <br>
-    <h2 id="promo" style="text-align:center">Promotion</h2>
-    <hr style="width:101%">
-    <h2 id="ads" style="text-align:center">Ads</h2>
-    <br>
-    <br>
-    <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width:101%">
+<body background="../views/assets/images/bg.jpg">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width:100%">
         <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -272,26 +153,34 @@
         </ol>
 
         <div class="carousel-inner">
-            <div class="item active" align="middle">
-                <img src="ad1.png">
+            <div class="item active" align="middle" style="height:700px">
+                <img src="../views/assets/images/Mov1.jpg" style="width:110%; position:absolute; top:-30%">
+                <div class="carousel-caption">
+                    <h3>Star Wars: The New Hope</h3>
+                </div>
             </div>
-        </div>
 
-        <div class="carousel-inner">
-            <div class="item" align="middle">
-                <img src="ad2png">
+            <div class="item" align="middle" style="height:700px;">
+                <img src="../views/assets/images/Mov2.jpg" style="width:120%; position:absolute; top:-80%">
+                <div class="carousel-caption">
+                    <h3>Star Wars: The Empire Strikes Back</h3>
+                </div>
             </div>
-        </div>
 
-        <div class="carousel-inner">
-            <div class="item" align="middle">
-                <img src="ad3.png">
+            <div class="item" align="middle" style="height:700px">
+                <img src="../views/assets/images/Mov3.jpg" style="width: 120%; position:absolute; top:-90%">
+                <img src="Mov3.jpg" style="width: 120%; position:absolute; top:-90%">
+                <div class="carousel-caption">
+                    <h3>Star Wars: Revenge of the Jedi</h3>
+                </div>
             </div>
-        </div>
 
-        <div class="carousel-inner">
-            <div class="item" align="middle">
-                <img src="ad4.png">
+            <div class="item" align="middle" style="height:700px">
+                <img src="../views/assets/images/Mov4.jpg" style="width: 120%; position:absolute; top:-20%">
+                <img src="Mov4.jpg" style="width: 120%; position:absolute; top:-20%">
+                <div class="carousel-caption">
+                    <h3>Back From the Future</h3>
+                </div>
             </div>
         </div>
 
@@ -304,10 +193,194 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
-    <hr style="width:101%">
-    <footer>
-      <p>COPYRIGHT 2018. JAVTix ALL RIGHTS RESERVED.</p>
-    </footer>
-</div>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand logo" href="Main.php">JAVTix</a>
+            </div>
+            <ul class="nav navbar-nav navs">
+            <li class="view zoom">
+                <a href="#myCarousel"><span class="glyphicon glyphicon-home"></span></a>
+            </li>
+            <li class="navs view zoom">
+                <a href="#mov">Movies</a>
+            </li>
+            <li class="navs view zoom">
+                <a href="#toggleButton">Cinema</a>
+            </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right navs view zoom">
+                <li>
+                    <a href="User.php">
+                        <span class="glyphicon glyphicon-user"></span> User</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <nav class="navbar navbar-inverse">
+    <div class="container-search">
+        <ul class="nav navbar-nav">
+        <li class="nav-item dropdown search">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Select Movie...
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+        </li>
+        <li class="nav-item dropdown search">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Select City...
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+        </li>
+        <li>
+            <a href="#" class="btn view zoom"><span class="glyphicon glyphicon-search">Search</span></a>
+        </li>
+        </ul>
+    </div>
+    </nav>
+    <div style="color:aliceblue">
+        <h2 id="mov" class="Header" style="text-align:center">Now Playing</h2>
+        <hr>
+        <div class="row" style="width:100%" align="center">
+            <div class="col-sm-3">
+                <a href="Movie.php"><img src="../views/assets/images/Mov5.jpg" class="view"></a>
+            </div>
+            <div class="col-sm-3">
+                <a href="Movie2.php"><img src="../views/assets/images/Mov6.jpg" class="view"></a>
+            </div>
+            <div class="col-sm-3">
+                <a href="Movie3.php"><img src="../views/assets/images/Mov7.jpg" class="view"></a>
+            </div>11
+            <div class="col-sm-3">
+                <a href="Movie4.php"><img src="../views/assets/images/Mov8.jpg" class="view"></a>
+            </div>
+            <br>
+        <br>
+        </div>
+        <div class="collapse" id="more" style="padding:10pt 0pt 0pt 0pt">
+            <div class="row" style="width:100%" align="center">
+                <div class="col-sm-3">
+                    <a href="Movie5.php"><img src="../views/assets/images/Mov9.jpg" class="view"></a>
+                </div>
+                <div class="col-sm-3">
+                    <a href="Movie6.php"><img src="../views/assets/images/Mov10.jpg" class="view"></a>
+                </div>
+                <div class="col-sm-3">
+                    <a href="Movie7.php"><img src="../views/assets/images/Mov11.jpg" class="view"></a>
+                </div>
+                <div class="col-sm-3">
+                    <a href="Movie8.php"><img src="../views/assets/images/Mov12.jpg" class="view"></a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="text-center">
+        <a class="btn btn-primary" role="button" data-toggle="collapse" href="#more">
+            See more
+        </a>
+        </div>
+        <!-- JANGAN LUPA INI MAU DIGANTI -->
+        <!-- <a id="toggleButton" class="btn btn-secondary" role="button" onclick="Show()" href="javascript:void(0);">See More</a> -->
+        <h2 id="mov" class="Header" style="text-align:center">Coming Soon</h2>
+        <hr>
+        <div class="row" style="width:100%" align="center">
+            <div class="col-sm-3">
+                <a href="Movie.php"><img src="../views/assets/images/Mov5.jpg" class="view"></a>
+            </div>
+            <div class="col-sm-3">
+                <a href="Movie2.php"><img src="../views/assets/images/Mov6.jpg" class="view"></a>
+            </div>
+            <div class="col-sm-3">
+                <a href="Movie3.php"><img src="../views/assets/images/Mov7.jpg" class="view"></a>
+            </div>11
+            <div class="col-sm-3">
+                <a href="Movie4.php"><img src="../views/assets/images/Mov8.jpg" class="view"></a>
+            </div>
+            <br>
+        <br>
+        </div>
+        <div class="collapse" id="more2" style="padding:10pt 0pt 0pt 0pt">
+            <div class="row" style="width:100%" align="center">
+                <div class="col-sm-3">
+                    <a href="Movie5.php"><img src="../views/assets/images/Mov9.jpg" class="view"></a>
+                </div>
+                <div class="col-sm-3">
+                    <a href="Movie6.php"><img src="../views/assets/images/Mov10.jpg" class="view"></a>
+                </div>
+                <div class="col-sm-3">
+                    <a href="Movie7.php"><img src="../views/assets/images/Mov11.jpg" class="view"></a>
+                </div>
+                <div class="col-sm-3">
+                    <a href="Movie8.php"><img src="../views/assets/images/Mov12.jpg" class="view"></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+        <a class="btn btn-primary" role="button" data-toggle="collapse" href="#more2">
+            See more
+        </a>
+        </div>
+        </div>
+        <h2 class="Header" id="toggleButton" style="text-align:center; color:aliceblue">Cinemas</h2>
+        <hr>
+        <div class="row" style="width:100%" align="center">
+            <div class="col-sm-6">
+                <a href="https://www.instagram.com/cgv.id/" target="_blank"><img src="../views/assets/images/CGV.png" class="view cinemaImages"></a>
+            </div>
+            <div class="col-sm-6">
+                <a href="https://www.facebook.com/CinemaXXI?ref=ts&fref=ts" target="_blank"><img src="../views/assets/images/XXI.png" class="view cinemaImages"></a>
+            </div>
+        </div>
+        <br>
+        <h2 class="Header" id="promo" style="text-align:center; color:aliceblue">Promotion</h2>
+        <hr>
+        <br>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width:101%">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+            </ol>
+
+            <div class="carousel-inner">
+                <div class="item active" align="middle">
+                    <img src="../views/assets/images/ad1.png" class="adImages">
+                </div>
+
+                <div class="item" align="middle">
+                    <img src="../views/assets/images/ad2.png" class="adImages">
+                </div>
+                <div class="item" align="middle">
+                    <img src="../views/assets/images/ad3.png" class="adImages">
+                </div>
+
+                <div class="item" align="middle">
+                    <img src="../views/assets/images/ad4.png" class="adImages">
+                </div>
+            </div>
+
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <hr>
+        <footer style="text-align:center; color:aliceblue">
+        <p>COPYRIGHT 2018. JAVTix ALL RIGHTS RESERVED.</p>
+        </footer>
+    </div>
 </body>
 </html>
