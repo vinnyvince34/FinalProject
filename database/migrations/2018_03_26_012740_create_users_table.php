@@ -15,7 +15,7 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->uuid('id');
-            $table->unsignedInteger('preferred_cinema_id');
+            $table->uuid('preferred_cinema_id');
             $table->string('name');
             $table->string('gender', 1);
             $table->date('birth_date');
@@ -27,11 +27,13 @@ class CreateUsersTable extends Migration
             $table->primary('id');
             $table->foreign('preferred_cinema_id')
                 ->references('id')
-                ->on('cinemas');
+                ->on('cinemas')
+                ->onDelete('cascade');
             
             $table->timestamps();
         });
-        
+
+        DB::statement('CREATE EXTENSION IF NOT EXISTS "uuid-ossp";');
         DB::statement('ALTER TABLE  users ALTER COLUMN id SET DEFAULT uuid_generate_v4();');
     }
 

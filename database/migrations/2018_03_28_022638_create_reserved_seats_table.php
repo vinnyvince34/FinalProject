@@ -18,12 +18,16 @@ class CreateReservedSeatsTable extends Migration
             $table->uuid('seat_id');
             $table->uuid('transaction_id');
             $table->uuid('schedule_id');
-            
-            $table->foreign('seat_id')->references('seat_id')->on('all_seats');
-            $table->foreign('transaction_id')->references('transaction_id')->on('transactions');
-            $table->foreign('schedule_id')->references('schedule_id')->on('schedules');
+
+            $table->primary('id');
+            $table->foreign('seat_id')->references('id')->on('all_seats');
+            $table->foreign('transaction_id')->references('id')->on('transactions');
+            $table->foreign('schedule_id')->references('id')->on('schedules');
             $table->timestamps();
         });
+
+        DB::statement('CREATE EXTENSION IF NOT EXISTS "uuid-ossp";');
+        DB::statement('ALTER TABLE  users ALTER COLUMN id SET DEFAULT uuid_generate_v4();');
     }
 
     /**

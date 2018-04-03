@@ -14,15 +14,20 @@ class CreateCinemasTable extends Migration
     public function up()
     {
         Schema::create('cinemas', function (Blueprint $table) {
-            $table->increments('cinema_id');
+            $table->uuid('id');
             $table->string('cinema_name');
             $table->string('city');
             $table->string('address');
             $table->string('cinema_what');
+
+            $table->primary('id');
             $table->timestamps();
         });
-        
-        DB::statement('ALTER TABLE  users ALTER COLUMN id SET DEFAULT uuid_generate_v4();');
+
+
+        // ini command buat postgre.. jadi ga bisa di mysql..
+        DB::statement('CREATE EXTENSION IF NOT EXISTS "uuid-ossp";');
+        DB::statement('ALTER TABLE  cinemas ALTER COLUMN id SET DEFAULT uuid_generate_v4();');
     }
 
     /**

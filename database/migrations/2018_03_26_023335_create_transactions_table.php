@@ -20,14 +20,16 @@ class CreateTransactionsTable extends Migration
             $table->tinyInteger('quantity');
             $table->integer('total_price');
             $table->uuid('promo_id');
-            
+
+            $table->primary('id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('schedule_id')->references('id')->on('schedules');
-            $table->foreign('promo_id')->references('id')->on('promo');
+            $table->foreign('promo_id')->references('id')->on('promos');
 
             $table->timestamps();
         });
-        
+
+        DB::statement('CREATE EXTENSION IF NOT EXISTS "uuid-ossp";');
         DB::statement('ALTER TABLE  users ALTER COLUMN id SET DEFAULT uuid_generate_v4();');
     }
 

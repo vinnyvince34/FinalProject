@@ -21,12 +21,15 @@ class CreateMoviesTable extends Migration
             $table->string('director');
             $table->string('rating');
             $table->string('genre');
-            $table->string('synopsys');
+            $table->string('synopsis');
             $table->string('image_url');
             $table->string('trailer_url');
+
+            $table->primary('id');
             $table->timestamps();
         });
-        
+
+        DB::statement('CREATE EXTENSION IF NOT EXISTS "uuid-ossp";');
         DB::statement('ALTER TABLE  users ALTER COLUMN id SET DEFAULT uuid_generate_v4();');
     }
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Movie;
 
 class MovieController extends Controller
 {
@@ -13,17 +14,7 @@ class MovieController extends Controller
      */
     public function index()
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        return Movie::all();
     }
 
     /**
@@ -34,7 +25,34 @@ class MovieController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try{
+            if($request->movie_name != NULL && $request->duration != NULL
+                && $request->casts != NULL && $request->director != NULL
+                && $request->rating != NULL && $request->genre != NULL
+                && $request->synopsis != NULL && $request->image_url != NULL
+                && $request->trailer_url != NULL) {
+
+                $new = $this->validate($request, [
+                    'movie_name' => 'required|min:3|max:50', //type:: 2D, 3D, IMAX, velvet
+                    'duration' => 'required|numeric',
+                    'casts' => 'required|min:3',
+                    'director' => 'required|min:3',
+                    'rating' => 'required',
+                    'genre' => 'required|min:3'
+
+                ]);
+
+
+                $new = RoomType::create($new);
+            } else {
+                throw new \Exception("Don't leave any field empty");
+            }
+        } catch(\Exception $e){
+
+            return response([
+                $e->getMessage()
+            ]);
+        }
     }
 
     /**
@@ -45,18 +63,8 @@ class MovieController extends Controller
      */
     public function show($id)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
+        $var = Movie::get();
+        return response([$var]);
     }
 
     /**
@@ -68,7 +76,15 @@ class MovieController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        try{
+            $var = Movie::findOrFail($id);
+
+            if ($var->a){}
+
+
+        } catch (\Exception $e){
+            return response([$e]);
+        }
     }
 
     /**

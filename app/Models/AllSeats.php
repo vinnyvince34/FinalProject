@@ -6,20 +6,20 @@ use Illuminate\Database\Eloquent\Model;
 
 class AllSeats extends Model
 {
-     protected $table = "all_seats";
+    protected $table = "all_seats";
     protected $fillable = ['seat_number', 'theatre_id'];
-    
+
+    protected $casts = ['id' => 'string'];
     protected $primaryKey = "id";
     
     public $incrementing = false;
     
-    public function xx()
+    public function reserved_seats()
     {
-        return $this->belongsTo('App\xx', '');
+        return $this->hasMany('App\Models\ReservedSeats', 'seat_id');
     }
     // 'App\Models\Theatres', 'theatre_id'
-    public function yy()
-    {
-        return $this->hasOne('App\xx', 'foreign_key');
+    public function theatre(){
+        return $this->hasOne('App\Models\Theatre', 'theatre_id');
     }
 }

@@ -8,14 +8,19 @@ class Cinema extends Model
 {
     protected $table = "cinemas";
     protected $fillable = ['cinema_name', 'city', 'address', 'cinema_what'];
-    
+
+    protected $casts = ['id' => 'string'];
     protected $primaryKey = "id";
     
     public $incrementing = false;
     
-    public function xx()
+    public function user()
     {
-        return $this->belongsTo('App\xx', '');
+        return $this->belongsTo('App\Models\User', 'preferred_cinema_id');
+    }
+
+    public function theatre(){
+        return $this->hasMany('App\Models\Theatre', 'cinema_id');
     }
     
 }

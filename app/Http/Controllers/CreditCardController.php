@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\CreditCard;
 
 class CreditCardController extends Controller
 {
@@ -13,7 +14,7 @@ class CreditCardController extends Controller
      */
     public function index()
     {
-        //
+        return CreditCard::all();
     }
 
     /**
@@ -23,7 +24,7 @@ class CreditCardController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**

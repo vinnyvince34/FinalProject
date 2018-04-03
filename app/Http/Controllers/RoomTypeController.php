@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\RoomType;
 
 class RoomTypeController extends Controller
 {
@@ -13,17 +14,7 @@ class RoomTypeController extends Controller
      */
     public function index()
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        return RoomType::all();
     }
 
     /**
@@ -34,7 +25,23 @@ class RoomTypeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try{
+            $new = $this->validate($request, [
+                'type_name' => 'required|min:3|max:50', //type:: 2D, 3D, IMAX, velvet
+                'weekday_price' => 'required|digits_between:4,5|numeric',
+                'weekend_price' => 'required|digits_between:4,5|numeric'
+            ]);
+
+            $new = RoomType::create($new);
+
+        } catch(\Exception $e){
+
+            return response([
+                $e->getMessage()
+            ]);
+        }
+
+        return response(["Successful!"]);
     }
 
     /**
@@ -45,18 +52,13 @@ class RoomTypeController extends Controller
      */
     public function show($id)
     {
-        //
-    }
+        try{
+            $var = RoomType::findOrFail($id);
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
+
+        } catch (\Exception $e){
+
+        }
     }
 
     /**

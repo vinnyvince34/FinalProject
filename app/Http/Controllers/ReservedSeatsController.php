@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Cinema;
+use App\Models\ReservedSeats;
 
-class CinemaController extends Controller
+class ReservedSeatsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,17 @@ class CinemaController extends Controller
      */
     public function index()
     {
-        return Cinema::all();
+        return ReservedSeats::all();
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
     }
 
     /**
@@ -25,11 +35,7 @@ class CinemaController extends Controller
      */
     public function store(Request $request)
     {
-        try{
-
-        } catch (\Exception $e){
-
-        }
+        //
     }
 
     /**
@@ -39,6 +45,17 @@ class CinemaController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
     {
         //
     }

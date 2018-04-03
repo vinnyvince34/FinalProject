@@ -14,18 +14,20 @@ class CreateSchedulesTable extends Migration
     public function up()
     {
         Schema::create('schedules', function (Blueprint $table) {
-            $table->increments('schedule_id');
-            $table->unsignedInteger('movie_id');
-            $table->unsignedInteger('cinema_id');
-            $table->unsignedInteger('type_id');
+            $table->uuid('id');
+            $table->uuid('movie_id');
+            $table->uuid('theatre_id');
             $table->dateTime('time');
 
-            $table->foreign('movie_id')->references('movie_id')->on('movies');
-            $table->foreign('cinema_id')->references('cinema_id')->on('cinemas');
-            $table->foreign('type_id')->references('type_id')->on('room_types');
+            $table->primary('id');
+            $table->foreign('movie_id')->references('id')->on('movies');
+            $table->foreign('theatre_id')->references('id')->on('theatres');
 
             $table->timestamps();
         });
+
+        DB::statement('CREATE EXTENSION IF NOT EXISTS "uuid-ossp";');
+        DB::statement('ALTER TABLE  users ALTER COLUMN id SET DEFAULT uuid_generate_v4();');
     }
 
     /**

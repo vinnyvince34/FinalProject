@@ -8,7 +8,8 @@ class ReservedSeats extends Model
 {
     protected $table = "transactions";
     protected $fillable = ['seat_id', 'transaction_id', 'schedule_id'];
-    
+
+    protected $casts = ['id' => 'string'];
     protected $primaryKey = "id";
     
     public $incrementing = false;
@@ -16,18 +17,18 @@ class ReservedSeats extends Model
     
     // 'App\Models\Transaction', 'transaction_id'
     // 'App\Models\Schedule', 'schedule_id'
-    public function xx()
-    {
-        return $this->belongsTo('App\xx', '');
-    }
     
-    public function yy()
+    public function schedule()
     {
-        return $this->hasOne('App\xx', 'foreign_key');
+        return $this->hasOne('App\Models\Schedule', 'schedule_id');
     }
-    
+
+    public function all_seats(){
+        return $this->belongsTo('App\Models\AllSeats', 'seat_id');
+    }
+
     public function transaction()
     {
-        return $this->hasMany('App\Models\Transaction','user_id');
+        return $this->belongsTo('App\Models\Transaction','transaction_id');
     }
 }

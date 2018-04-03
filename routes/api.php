@@ -21,14 +21,14 @@ Route::middleware('auth:api')->get('/item', function (Request $request) {
     return $request->item();
 });
 
-Route::get('/user', 'UserController@all');
-Route::get('/user/{id}', 'UserController@find');
-Route::post('/user', 'UserController@register');
-Route::delete('/user/{id}', 'UserController@delete');
-Route::put('/user/{id}', 'UserController@update');
-
-Route::get('/item', 'ItemController@all');
-Route::get('/item/{id}', 'ItemController@find');
-Route::post('/item', 'ItemController@register');
-Route::delete('/item/{id}', 'ItemController@delete');
-Route::put('/item/{id}', 'ItemController@update');
+Route::resource('user', 'UserController');
+Route::resource('credit_card', 'CreditCardController');
+Route::resource('cinema', 'CinemaController');
+Route::resource('movie', 'MovieController');
+Route::resource('schedule', 'ScheduleController');
+Route::resource('room_type', 'RoomTypeController');
+Route::resource('theatre', 'TheatreController');
+Route::resource('all_seats', 'AllSeatsController');
+Route::resource('transaction', 'TransactionController');
+Route::resource('reserved_seats', 'ReservedSeatsController');
+Route::resource('promo', 'PromoController');

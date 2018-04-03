@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Transaction;
+use App\Models\AllSeats;
 
-class TransactionController extends Controller
+class AllSeatsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class TransactionController extends Controller
      */
     public function index()
     {
-        return Transaction::all();
+        return AllSeats::all();
     }
 
     /**
@@ -22,9 +22,24 @@ class TransactionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        try{
+            $signature = $this->validate($request, [
+                'name' => 'required|min:3|max:50',
+                'email' => 'required|email',
+                'body' => 'required|min:3'
+            ]);
+
+            $signature = Signature::create($signature);
+
+
+
+        } catch(\Exception $e){
+
+            return $e;
+        }
+        return new SignatureResource($signature);
     }
 
     /**

@@ -16,11 +16,15 @@ class CreateAllSeatsTable extends Migration
         Schema::create('all_seats', function (Blueprint $table) {
             $table->uuid('id');
             $table->string('seat_number');
-            $table->unsignedInteger('theatre_id');
-            
-            $table->foreign('theatre_id')->references('theatre_id')->on('theatres');
+            $table->uuid('theatre_id');
+
+            $table->primary('id');
+            $table->foreign('theatre_id')->references('id')->on('theatres');
             $table->timestamps();
         });
+
+        DB::statement('CREATE EXTENSION IF NOT EXISTS "uuid-ossp";');
+        DB::statement('ALTER TABLE  users ALTER COLUMN id SET DEFAULT uuid_generate_v4();');
     }
 
     /**

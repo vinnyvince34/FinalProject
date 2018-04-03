@@ -8,23 +8,22 @@ class Transaction extends Model
 {
     protected $table = "transactions";
     protected $fillable = ['user_id', 'schedule_id', 'quantity', 'total_price', 'promo_id'];
-    
+
+    protected $casts = ['id' => 'string'];
     protected $primaryKey = "id";
     
     public $incrementing = false;
     
-    public function xx()
+    public function reserved_seat()
     {
-        return $this->belongsTo('App\xx', '');
+        return $this->hasMany('App\Models\ReservedSeats','transaction_id');
     }
-    
-    public function yy()
-    {
-        return $this->hasOne('App\xx', 'foreign_key');
+
+    public function user(){
+        return $this->belongsTo('App\Models\User', 'user_id');
     }
-    
-    public function transaction()
-    {
-        return $this->hasMany('App\Models\Transaction','user_id');
+
+    public function promo(){
+        return $this->hasOne('App\Models\Promo', 'promo_id');
     }
 }

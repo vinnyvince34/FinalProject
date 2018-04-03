@@ -18,10 +18,12 @@ class CreateRoomTypesTable extends Migration
             $table->string('type_name');
             $table->integer('weekday_price');
             $table->integer('weekend_price');
-            
+
+            $table->primary('id');
             $table->timestamps();
         });
-        
+
+        DB::statement('CREATE EXTENSION IF NOT EXISTS "uuid-ossp";');
         DB::statement('ALTER TABLE  users ALTER COLUMN id SET DEFAULT uuid_generate_v4();');
     }
 
