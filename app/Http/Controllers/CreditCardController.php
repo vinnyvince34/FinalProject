@@ -18,16 +18,6 @@ class CreditCardController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -35,7 +25,29 @@ class CreditCardController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try{
+
+            $new = $this->validate($request->all(), [
+                'id' => 'required|digits:8|unique:credit_cards,id',
+                'user_id' => 'required',
+                'first_name' => 'required',
+                'last_name' => 'required',
+                'address' => 'required',
+                'zip_code' => 'required|min:3',
+                'city' => 'required|min:3'
+            ]);
+
+            CreditCard::create($new);
+
+            return response(
+                'Created', 201
+            );
+        } catch(\Exception $e){
+
+            return response(
+                $e->getMessage(),400
+            );
+        }
     }
 
     /**

@@ -42,8 +42,7 @@ class MovieController extends Controller
 
                 ]);
 
-
-                $new = RoomType::create($new);
+                RoomType::create($new);
             } else {
                 throw new \Exception("Don't leave any field empty");
             }
@@ -63,7 +62,7 @@ class MovieController extends Controller
      */
     public function show($id)
     {
-        $var = Movie::get();
+        $var = Movie::all();
         return response([$var]);
     }
 
