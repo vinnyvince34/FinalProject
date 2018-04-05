@@ -24,7 +24,7 @@ class CreateRoomTypesTable extends Migration
         });
 
         DB::statement('CREATE EXTENSION IF NOT EXISTS "uuid-ossp";');
-        DB::statement('ALTER TABLE  users ALTER COLUMN id SET DEFAULT uuid_generate_v4();');
+        DB::statement('ALTER TABLE  room_types ALTER COLUMN id SET DEFAULT uuid_generate_v4();');
     }
 
     /**

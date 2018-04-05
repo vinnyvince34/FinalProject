@@ -21,7 +21,7 @@ Route::middleware('auth:api')->get('/item', function (Request $request) {
     return $request->item();
 });
 
-Route::resource('user', 'UserController');
+Route::resource('user', 'CustomerController');
 Route::resource('credit_card', 'CreditCardController');
 Route::resource('cinema', 'CinemaController');
 Route::resource('movie', 'MovieController');

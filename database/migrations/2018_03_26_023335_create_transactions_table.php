@@ -22,7 +22,7 @@ class CreateTransactionsTable extends Migration
             $table->uuid('promo_id');
 
             $table->primary('id');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('customers');
             $table->foreign('schedule_id')->references('id')->on('schedules');
             $table->foreign('promo_id')->references('id')->on('promos');
 
@@ -30,7 +30,7 @@ class CreateTransactionsTable extends Migration
         });
 
         DB::statement('CREATE EXTENSION IF NOT EXISTS "uuid-ossp";');
-        DB::statement('ALTER TABLE  users ALTER COLUMN id SET DEFAULT uuid_generate_v4();');
+        DB::statement('ALTER TABLE  transactions ALTER COLUMN id SET DEFAULT uuid_generate_v4();');
     }
 
     /**
