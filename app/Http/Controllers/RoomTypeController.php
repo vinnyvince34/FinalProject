@@ -32,7 +32,9 @@ class RoomTypeController extends Controller
                 'weekend_price' => 'required|digits_between:4,5|numeric'
             ]);
 
-            $new = RoomType::create($new);
+            RoomType::create($new);
+
+            return response(["Successful!"]);
 
         } catch(\Exception $e){
 
@@ -40,8 +42,6 @@ class RoomTypeController extends Controller
                 $e->getMessage()
             ]);
         }
-
-        return response(["Successful!"]);
     }
 
     /**
@@ -53,10 +53,14 @@ class RoomTypeController extends Controller
     public function show($id)
     {
         try{
+
             $var = RoomType::findOrFail($id);
 
+            return response([$var], 200);
 
-        } catch (\Exception $e){
+        } catch (\Exception $e) {
+
+            return response("Movie not found.", 400);
 
         }
     }
@@ -70,7 +74,7 @@ class RoomTypeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
     }
 
     /**
@@ -81,6 +85,18 @@ class RoomTypeController extends Controller
      */
     public function destroy($id)
     {
-        //
+        try{
+            $var = RoomType::findOrFail($id);
+            if(isset($var)){
+                $var -> delete();
+                return response(
+                    "Successful",200
+                );
+            }
+        }catch(\Exception $e){
+            return response(
+                $e->getMessage(), 400
+            );
+        }
     }
 }

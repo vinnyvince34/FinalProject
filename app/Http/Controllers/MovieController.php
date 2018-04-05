@@ -26,26 +26,19 @@ class MovieController extends Controller
     public function store(Request $request)
     {
         try{
-            if($request->movie_name != NULL && $request->duration != NULL
-                && $request->casts != NULL && $request->director != NULL
-                && $request->rating != NULL && $request->genre != NULL
-                && $request->synopsis != NULL && $request->image_url != NULL
-                && $request->trailer_url != NULL) {
+            $new = $this->validate($request, [
+                'movie_name' => 'required|min:3|max:50',
+                'duration' => 'required|numeric',
+                'casts' => 'required|min:3',
+                'director' => 'required|min:3',
+                'rating' => 'required',
+                'genre' => 'required|min:3'
+            ]);
 
-                $new = $this->validate($request, [
-                    'movie_name' => 'required|min:3|max:50', //type:: 2D, 3D, IMAX, velvet
-                    'duration' => 'required|numeric',
-                    'casts' => 'required|min:3',
-                    'director' => 'required|min:3',
-                    'rating' => 'required',
-                    'genre' => 'required|min:3'
+            RoomType::create($new);
 
-                ]);
+            return response(["Successful!"]);
 
-                RoomType::create($new);
-            } else {
-                throw new \Exception("Don't leave any field empty");
-            }
         } catch(\Exception $e){
 
             return response([
@@ -62,8 +55,17 @@ class MovieController extends Controller
      */
     public function show($id)
     {
-        $var = Movie::all();
-        return response([$var]);
+        try{
+
+            $var = Movie::findOrFail($id);
+
+            return response([$var], 200);
+
+        } catch (\Exception $e) {
+
+            return response("Movie not found.", 400);
+
+        }
     }
 
     /**
@@ -94,6 +96,18 @@ class MovieController extends Controller
      */
     public function destroy($id)
     {
-        //
+        try{
+            $var = Movie::findOrFail($id);
+            if(isset($var)){
+                $var -> delete();
+                return response(
+                    "Successful",200
+                );
+            }
+        }catch(\Exception $e){
+            return response(
+                $e->getMessage(), 400
+            );
+        }
     }
 }

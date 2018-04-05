@@ -58,18 +58,17 @@ class CreditCardController extends Controller
      */
     public function show($id)
     {
-        //
-    }
+        try{
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
+            $var = CreditCard::findOrFail($id);
+
+            return response([$var], 200);
+
+        } catch (\Exception $e) {
+
+            return response("Movie not found.", 400);
+
+        }
     }
 
     /**
@@ -92,6 +91,18 @@ class CreditCardController extends Controller
      */
     public function destroy($id)
     {
-        //
+        try{
+            $var = CreditCard::findOrFail($id);
+            if(isset($var)){
+                $var -> delete();
+                return response(
+                    "Successful",200
+                );
+            }
+        }catch(\Exception $e){
+            return response(
+                $e->getMessage(), 400
+            );
+        }
     }
 }

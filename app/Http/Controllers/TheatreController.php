@@ -18,16 +18,6 @@ class TheatreController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -35,7 +25,23 @@ class TheatreController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try{
+            $new = $this->validate($request, [
+                'cinema_id' => 'required|min:3|max:50',
+                'type_id' => 'required|numeric',
+                'theatre_number' => 'required|min:3'
+            ]);
+
+            Theatre::create($new);
+
+            return response(["Successful!"]);
+
+        } catch(\Exception $e){
+
+            return response([
+                $e->getMessage()
+            ]);
+        }
     }
 
     /**
@@ -46,18 +52,17 @@ class TheatreController extends Controller
      */
     public function show($id)
     {
-        //
-    }
+        try{
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
+            $var = Theatre::findOrFail($id);
+
+            return response([$var], 200);
+
+        } catch (\Exception $e) {
+
+            return response("Movie not found.", 400);
+
+        }
     }
 
     /**
@@ -80,6 +85,18 @@ class TheatreController extends Controller
      */
     public function destroy($id)
     {
-        //
+        try{
+            $var = Theatre::findOrFail($id);
+            if(isset($var)){
+                $var -> delete();
+                return response(
+                    "Successful",200
+                );
+            }
+        }catch(\Exception $e){
+            return response(
+                $e->getMessage(), 400
+            );
+        }
     }
 }

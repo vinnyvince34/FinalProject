@@ -18,16 +18,6 @@ class ReservedSeatsController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -35,7 +25,24 @@ class ReservedSeatsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try{
+            $new = $this->validate($request, [
+                'name' => 'required|min:3|max:50',
+                'description' => 'required|numeric',
+                'value' => 'required|min:3',
+                'image_url' => 'required|min:3'
+            ]);
+
+            ReservedSeats::create($new);
+
+            return response(["Successful!"]);
+
+        } catch(\Exception $e){
+
+            return response([
+                $e->getMessage()
+            ]);
+        }
     }
 
     /**
@@ -46,18 +53,17 @@ class ReservedSeatsController extends Controller
      */
     public function show($id)
     {
-        //
-    }
+        try{
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
+            $var = ReservedSeats::findOrFail($id);
+
+            return response([$var], 200);
+
+        } catch (\Exception $e) {
+
+            return response("Movie not found.", 400);
+
+        }
     }
 
     /**
@@ -80,6 +86,18 @@ class ReservedSeatsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        try{
+            $var = ReservedSeats::findOrFail($id);
+            if(isset($var)){
+                $var -> delete();
+                return response(
+                    "Successful",200
+                );
+            }
+        }catch(\Exception $e){
+            return response(
+                $e->getMessage(), 400
+            );
+        }
     }
 }

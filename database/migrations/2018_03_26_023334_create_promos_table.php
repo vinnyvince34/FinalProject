@@ -16,7 +16,10 @@ class CreatePromosTable extends Migration
     {
         Schema::create('promos', function (Blueprint $table) {
             $table->uuid('id');
+            $table->string('name');
+            $table->string('description');
             $table->integer('value'); // if decimal ( 0 < x < 1 ), then its a percentage discount; if x > 1, is discount by value
+            $table->string('image_url');
 
             $table->primary('id');
             $table->timestamps();

@@ -7,8 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Promo extends Model
 {
     protected $table = "promos";
-    protected $fillable = ['value'];
-    // attributes still unknown
+    protected $fillable = ['name', 'description', 'value', 'image_url'];
 
     protected $casts = ['id' => 'string'];
     protected $primaryKey = "id";

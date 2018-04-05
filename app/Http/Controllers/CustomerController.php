@@ -27,9 +27,27 @@ class CustomerController extends Controller
     {
         try{
 
+            $new = $this->validate($request->all(), [
+                'preferred_cinema_id' => 'required|digits:8|unique:credit_cards,id',
+                'name' => 'required',
+                'gender' => 'required',
+                'birth_date' => 'required',
+                'phone_number' => 'required',
+                'city' => 'required|min:3',
+                'email' => 'required|min:3',
+                'password' =>  'required'
+            ]);
 
-        } catch (\Exception $e) {
+            Customer::create($new);
 
+            return response(
+                'Created', 201
+            );
+        } catch(\Exception $e){
+
+            return response(
+                $e->getMessage(),400
+            );
         }
     }
 
@@ -41,7 +59,17 @@ class CustomerController extends Controller
      */
     public function show($id)
     {
-        //
+        try{
+
+            $var = Customer::findOrFail($id);
+
+            return response([$var], 200);
+
+        } catch (\Exception $e) {
+
+            return response("Movie not found.", 400);
+
+        }
     }
 
     /**
@@ -64,6 +92,18 @@ class CustomerController extends Controller
      */
     public function destroy($id)
     {
-        //
+        try{
+            $var = Customer::findOrFail($id);
+            if(isset($var)){
+                $var -> delete();
+                return response(
+                    "Successful",200
+                );
+            }
+        }catch(\Exception $e){
+            return response(
+                $e->getMessage(), 400
+            );
+        }
     }
 }

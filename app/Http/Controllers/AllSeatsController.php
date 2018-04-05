@@ -18,31 +18,6 @@ class AllSeatsController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create(Request $request)
-    {
-        try{
-            $signature = $this->validate($request, [
-                'name' => 'required|min:3|max:50',
-                'email' => 'required|email',
-                'body' => 'required|min:3'
-            ]);
-
-            $signature = Signature::create($signature);
-
-
-
-        } catch(\Exception $e){
-
-            return $e;
-        }
-        return new SignatureResource($signature);
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -50,7 +25,24 @@ class AllSeatsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try{
+
+            $new = $this->validate($request->all(), [
+                'seat_number' => 'required|digits:8|unique:credit_cards,id',
+                'theatre_id' => 'required'
+            ]);
+
+            AllSeats::create($new);
+
+            return response(
+                'Created', 201
+            );
+        } catch(\Exception $e){
+
+            return response(
+                $e->getMessage(),400
+            );
+        }
     }
 
     /**
@@ -61,18 +53,18 @@ class AllSeatsController extends Controller
      */
     public function show($id)
     {
-        //
-    }
+        // i dont think we need this thou
+        try{
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
+            $var = AllSeats::findOrFail($id);
+
+            return response([$var], 200);
+
+        } catch (\Exception $e) {
+
+            return response("Movie not found.", 400);
+
+        }
     }
 
     /**
@@ -84,7 +76,21 @@ class AllSeatsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        try {
+            $var = AllSeats::findOrFail($id);
+
+            if ( isset($var)){
+                
+            }
+
+
+        } catch (\Exception $e) {
+
+            return response([
+               $e
+            ]);
+
+        }
     }
 
     /**
@@ -95,6 +101,18 @@ class AllSeatsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        try{
+            $var = RoomType::findOrFail($id);
+            if(isset($var)){
+                $var -> delete();
+                return response(
+                    "Successful",200
+                );
+            }
+        }catch(\Exception $e){
+            return response(
+                $e->getMessage(), 400
+            );
+        }
     }
 }

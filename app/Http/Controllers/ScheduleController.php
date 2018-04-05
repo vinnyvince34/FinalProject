@@ -25,7 +25,23 @@ class ScheduleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try{
+            $new = $this->validate($request, [
+                'movie_id' => 'required',
+                'theatre_id' => 'required',
+                'time' => 'required'
+            ]);
+
+            Schedule::create($new);
+
+            return response(["Successful!"]);
+
+        } catch(\Exception $e){
+
+            return response([
+                $e->getMessage()
+            ]);
+        }
     }
 
     /**
@@ -36,18 +52,17 @@ class ScheduleController extends Controller
      */
     public function show($id)
     {
-        //
-    }
+        try{
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
+            $var = Schedule::findOrFail($id);
+
+            return response([$var], 200);
+
+        } catch (\Exception $e) {
+
+            return response("Movie not found.", 400);
+
+        }
     }
 
     /**
@@ -70,6 +85,18 @@ class ScheduleController extends Controller
      */
     public function destroy($id)
     {
-        //
+        try{
+            $var = Schedule::findOrFail($id);
+            if(isset($var)){
+                $var -> delete();
+                return response(
+                    "Successful",200
+                );
+            }
+        }catch(\Exception $e){
+            return response(
+                $e->getMessage(), 400
+            );
+        }
     }
 }

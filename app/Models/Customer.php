@@ -14,16 +14,6 @@ class Customer extends Model
     
     public $incrementing = false;
     
-//    public function xx()
-//    {
-//        return $this->belongsTo('App\xx', '');
-//    }
-//
-//    public function yy()
-//    {
-//        return $this->hasOne('App\xx', 'foreign_key');
-//    }
-    
     public function transaction()
     {
         return $this->hasMany('App\Models\Transaction','user_id');
