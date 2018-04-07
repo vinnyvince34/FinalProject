@@ -81,7 +81,53 @@ class CustomerController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        try {
+
+            $var = Customer::findOrFail($id);
+
+            if($request->preferred_cinema_id == NULL){
+                $request->preferred_cinema_id = $var->preferred_cinema_id;
+            }
+            if($request->name == NULL){
+                $request->name = $var->name;
+            }
+            if($request->gender == NULL){
+                $request->gender = $var->gender;
+            }
+            if($request->birth_date == NULL){
+                $request->birth_date = $var->birth_date;
+            }
+            if($request->address == NULL){
+                $request->address = $var->address;
+            }
+            if($request->phone_number == NULL){
+                $request->phone_number = $var->phone_number;
+            }
+            if($request->email == NULL){
+                $request->email = $var->remail;
+            }
+            if($request->password == NULL){
+                $request->password = $var->password;
+            }
+
+            $var->update([
+                'preferred_cinema_id' => $request->preferred_cinema_id,
+                'name' => $request->name,
+                'gender' => $request->gender,
+                'birth_date' => $request->birth_date,
+                'address' => $request->address,
+                'phone_number' => $request->phone_number,
+                'email' => $request->email,
+                'password' => $request->password
+            ]);
+
+        } catch (\Exception $e) {
+
+            return response([
+                $e
+            ], 400);
+
+        }
     }
 
     /**

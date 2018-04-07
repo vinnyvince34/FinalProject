@@ -74,7 +74,32 @@ class ScheduleController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        try {
+            $var = Schedule::findOrFail($id);
+
+            if($request->movie_id == NULL){
+                $request->movie_id = $var->movie_id;
+            }
+            if($request->theatre_id == NULL){
+                $request->theatre_id = $var->theatre_id;
+            }
+            if($request->time == NULL){
+                $request->time = $var->time;
+            }
+
+            $var->update([
+                'movie_id' => $request->movie_id,
+                'theatre_id' => $request->theatre_id,
+                'time' => $request->time
+            ]);
+
+        } catch (\Exception $e) {
+
+            return response([
+                $e
+            ], 400);
+
+        }
     }
 
     /**

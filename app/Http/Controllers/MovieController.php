@@ -77,14 +77,59 @@ class MovieController extends Controller
      */
     public function update(Request $request, $id)
     {
-        try{
+        try {
             $var = Movie::findOrFail($id);
 
-            if ($var->a){}
+            if($request->movie_name == NULL){
+                $request->movie_name = $var->movie_name;
+            }
+            if($request->duration == NULL){
+                $request->duration = $var->duration;
+            }
+            if($request->casts == NULL){
+                $request->casts = $var->casts;
+            }
+            if($request->director == NULL){
+                $request->director = $var->director;
+            }
+            if($request->rating == NULL){
+                $request->rating = $var->rating;
+            }
+            if($request->genre == NULL){
+                $request->genre = $var->genre;
+            }
+            if($request->synopsis == NULL){
+                $request->synopsis = $var->synopsis;
+            }
+            if($request->image_url == NULL){
+                $request->image_url = $var->image_url;
+            }
+            if($request->trailer_url == NULL){
+                $request->trailer_url = $var->trailer_url;
+            }
+            if($request->status == NULL){
+                $request->status = $var->status;
+            }
 
+            $var->update([
+                'movie_name' => $request->movie_name,
+                'duration' => $request->duration,
+                'casts' => $request->casts,
+                'director' => $request->director,
+                'rating' => $request->rating,
+                'genre' => $request->genre,
+                'synopsis' => $request->synopsis,
+                'image_url' => $request->image_url,
+                'trailer_url' => $request->trailer_url,
+                'status' => $request->status
+            ]);
 
-        } catch (\Exception $e){
-            return response([$e]);
+        } catch (\Exception $e) {
+
+            return response([
+                $e
+            ], 400);
+
         }
     }
 

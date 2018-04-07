@@ -79,16 +79,23 @@ class AllSeatsController extends Controller
         try {
             $var = AllSeats::findOrFail($id);
 
-            if ( isset($var)){
-                
+            if($request->seat_number == NULL){
+                $request->seat_number = $var->seat_number;
+            }
+            if($request->theatre_id == NULL){
+                $request->theatre_id = $var->theatre_id;
             }
 
+            $var->update([
+                'seat_number' => $request->seat_number,
+                'theatre_id' => $request->theatre_id
+            ]);
 
         } catch (\Exception $e) {
 
             return response([
                $e
-            ]);
+            ], 400);
 
         }
     }

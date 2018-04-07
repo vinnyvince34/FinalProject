@@ -74,7 +74,32 @@ class RoomTypeController extends Controller
      */
     public function update(Request $request, $id)
     {
+        try {
+            $var = RoomType::findOrFail($id);
 
+            if($request->type_name == NULL){
+                $request->type_name = $var->type_name;
+            }
+            if($request->weekday_price == NULL){
+                $request->weekday_price = $var->weekday_price;
+            }
+            if($request->weekend_price == NULL){
+                $request->weekend_price = $var->weekend_price;
+            }
+
+            $var->update([
+                'type_name' => $request->type_name,
+                'weekday_price' => $request->weekday_price,
+                'weekend_price' => $request->weekend_price
+            ]);
+
+        } catch (\Exception $e) {
+
+            return response([
+                $e
+            ], 400);
+
+        }
     }
 
     /**

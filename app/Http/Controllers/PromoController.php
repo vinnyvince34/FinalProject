@@ -75,7 +75,36 @@ class PromoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        try {
+            $var = Promo::findOrFail($id);
+
+            if($request->name == NULL){
+                $request->name = $var->name;
+            }
+            if($request->description == NULL){
+                $request->description = $var->description;
+            }
+            if($request->value == NULL){
+                $request->value = $var->value;
+            }
+            if($request->image_url == NULL){
+                $request->image_url = $var->image_url;
+            }
+
+            $var->update([
+                'name' => $request->name,
+                'description' => $request->description,
+                'value' => $request->value,
+                'image_url' => $request->image_url
+            ]);
+
+        } catch (\Exception $e) {
+
+            return response([
+                $e
+            ], 400);
+
+        }
     }
 
     /**

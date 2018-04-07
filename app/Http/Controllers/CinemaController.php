@@ -75,7 +75,37 @@ class CinemaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        try {
+
+            $var = Cinema::findOrFail($id);
+
+            if($request->cinema_name == NULL){
+                $request->cinema_name = $var->cinema_name;
+            }
+            if($request->city == NULL){
+                $request->city = $var->city;
+            }
+            if($request->address == NULL){
+                $request->address = $var->address;
+            }
+            if($request->cinema_what == NULL){
+                $request->cinema_what = $var->cinema_what;
+            }
+
+            $var->update([
+                'cinema_name' => $request->cinema_name,
+                'city' => $request->city,
+                'address' => $request->address,
+                'cinema_what' => $request->cinema_what,
+            ]);
+
+        } catch (\Exception $e) {
+
+            return response([
+                $e
+            ], 400);
+
+        }
     }
 
     /**

@@ -77,7 +77,36 @@ class TransactionController extends Controller
 
     public function update(Request $request, $id)
     {
-        //
+        try {
+            $var = Transaction::findOrFail($id);
+
+            if($request->user_id == NULL){
+                $request->user_id = $var->user_id;
+            }
+            if($request->quantity == NULL){
+                $request->quantity = $var->quantity;
+            }
+            if($request->total_price == NULL){
+                $request->total_price = $var->total_price;
+            }
+            if($request->promo_id == NULL){
+                $request->promo_id = $var->promo_id;
+            }
+
+            $var->update([
+                'seat_number' => $request->seat_number,
+                'theatre_id' => $request->theatre_id,
+                'total_price' => $request->total_price,
+                'promo_id' => $request->promo_id
+            ]);
+
+        } catch (\Exception $e) {
+
+            return response([
+                $e
+            ], 400);
+
+        }
     }
 
     /**

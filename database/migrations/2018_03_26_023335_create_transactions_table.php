@@ -16,7 +16,7 @@ class CreateTransactionsTable extends Migration
         Schema::create('transactions', function (Blueprint $table) {
             $table->uuid('id'); // transaction_id
             $table->uuid('user_id');
-            $table->uuid('schedule_id');
+//            $table->uuid('schedule_id');
             $table->tinyInteger('quantity');
             $table->integer('total_price');
             $table->uuid('promo_id');

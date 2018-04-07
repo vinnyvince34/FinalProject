@@ -74,7 +74,32 @@ class TheatreController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        try {
+            $var = Theatre::findOrFail($id);
+
+            if($request->cinema_id == NULL){
+                $request->cinema_id = $var->cinema_id;
+            }
+            if($request->type_id == NULL){
+                $request->type_id = $var->type_id;
+            }
+            if($request->theatre_number == NULL){
+                $request->theatre_number = $var->theatre_number;
+            }
+
+            $var->update([
+                'cinema_id' => $request->cinema_id,
+                'type_id' => $request->type_id,
+                'theatre_number' => $request->theatre_number
+            ]);
+
+        } catch (\Exception $e) {
+
+            return response([
+                $e
+            ], 400);
+
+        }
     }
 
     /**

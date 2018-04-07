@@ -75,7 +75,32 @@ class ReservedSeatsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        try {
+            $var = ReservedSeats::findOrFail($id);
+
+            if($request->seat_id == NULL){
+                $request->seat_id = $var->seat_id;
+            }
+            if($request->transaction_id == NULL){
+                $request->transaction_id = $var->transaction_id;
+            }
+            if($request->schedule_id == NULL){
+                $request->schedule_id = $var->schedule_id;
+            }
+
+            $var->update([
+                'seat_id' => $request->seat_id,
+                'transaction_id' => $request->transaction_id,
+                'schedule_id' => $request->schedule_id
+            ]);
+
+        } catch (\Exception $e) {
+
+            return response([
+                $e
+            ], 400);
+
+        }
     }
 
     /**
