@@ -26,9 +26,9 @@ class CustomerController extends Controller
     public function store(Request $request)
     {
         try{
-
-            $new = $this->validate($request->all(), [
-                'preferred_cinema_id' => 'required|digits:8|unique:credit_cards,id',
+            //'email' => 'unique:users,email_address,'.$user->id //ni kalo update, tp emailnya ga diganti
+            $new = $this->validate($request, [
+                'preferred_cinema_id' => 'required',
                 'name' => 'required',
                 'gender' => 'required',
                 'birth_date' => 'required',

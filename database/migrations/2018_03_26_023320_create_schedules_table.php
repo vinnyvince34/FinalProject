@@ -17,7 +17,7 @@ class CreateSchedulesTable extends Migration
             $table->uuid('id');
             $table->uuid('movie_id');
             $table->uuid('theatre_id');
-            $table->dateTime('time');
+            $table->string('time');
 
             $table->primary('id');
             $table->foreign('movie_id')->references('id')->on('movies');

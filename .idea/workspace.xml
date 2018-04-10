@@ -2,7 +2,281 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1d0d7f2-9af1-48a6-94fc-02a53a3a3e80" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/verify.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/FinalProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FinalProject.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CustomerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CustomerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Customer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Customer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_03_26_012740_create_customers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_03_26_012740_create_customers_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_03_26_023320_create_schedules_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_03_26_023320_create_schedules_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_03_26_023335_create_transactions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_03_26_023335_create_transactions_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/doctrine/dbal/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOStatement.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOStatement.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Schema/Column.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Schema/Column.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/DateIntervalType.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/DateIntervalType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Version.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Version.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/league/flysystem/src/Adapter/Local.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/league/flysystem/src/Adapter/Local.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/league/flysystem/src/Directory.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/league/flysystem/src/Directory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/league/flysystem/src/File.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/league/flysystem/src/File.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/league/flysystem/src/Filesystem.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/league/flysystem/src/Filesystem.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/league/flysystem/src/FilesystemInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/league/flysystem/src/FilesystemInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/league/flysystem/src/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/league/flysystem/src/Handler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/league/flysystem/src/ReadInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/league/flysystem/src/ReadInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/paragonie/random_compat/lib/random.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/paragonie/random_compat/lib/random.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/paragonie/random_compat/psalm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/paragonie/random_compat/psalm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/.php_cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/ChangeLog-5.3.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/ChangeLog-5.3.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/ChangeLog-6.0.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/ChangeLog-6.0.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/Report/Clover.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/Report/Clover.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/Report/Crap4j.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/Report/Crap4j.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/Report/Html/Renderer.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/Report/Html/Renderer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/Report/PHP.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/Report/PHP.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/Version.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/Version.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/.php_cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/ChangeLog.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/ChangeLog.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/src/Generator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/src/Generator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/src/Generator/mocked_class.tpl.dist" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/src/Generator/mocked_class.tpl.dist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/src/Invocation/StaticInvocation.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/src/Invocation/StaticInvocation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/src/InvocationMocker.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/src/InvocationMocker.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/src/MockBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/src/MockBuilder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/src/MockObject.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/src/MockObject.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/232.phpt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/232.phpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/397.phpt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/397.phpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/abstract_class.phpt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/abstract_class.phpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/class.phpt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/class.phpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/class_call_parent_clone.phpt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/class_call_parent_clone.phpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/class_call_parent_constructor.phpt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/class_call_parent_constructor.phpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/class_dont_call_parent_clone.phpt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/class_dont_call_parent_clone.phpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/class_dont_call_parent_constructor.phpt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/class_dont_call_parent_constructor.phpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/class_implementing_interface_call_parent_constructor.phpt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/class_implementing_interface_call_parent_constructor.phpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/class_implementing_interface_dont_call_parent_constructor.phpt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/class_implementing_interface_dont_call_parent_constructor.phpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/class_partial.phpt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/class_partial.phpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/class_with_deprecated_method.phpt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/class_with_deprecated_method.phpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/class_with_method_named_method.phpt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/class_with_method_named_method.phpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/class_with_method_with_nullable_typehinted_variadic_arguments.phpt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/class_with_method_with_nullable_typehinted_variadic_arguments.phpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/class_with_method_with_typehinted_variadic_arguments.phpt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/class_with_method_with_typehinted_variadic_arguments.phpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/class_with_method_with_variadic_arguments.phpt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/class_with_method_with_variadic_arguments.phpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/interface.phpt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/interface.phpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/invocation_object_clone_object.phpt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/invocation_object_clone_object.phpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/namespaced_class.phpt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/namespaced_class.phpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/namespaced_class_call_parent_clone.phpt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/namespaced_class_call_parent_clone.phpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/namespaced_class_call_parent_constructor.phpt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/namespaced_class_call_parent_constructor.phpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/namespaced_class_dont_call_parent_clone.phpt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/namespaced_class_dont_call_parent_clone.phpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/namespaced_class_dont_call_parent_constructor.phpt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/namespaced_class_dont_call_parent_constructor.phpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/namespaced_class_implementing_interface_call_parent_constructor.phpt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/namespaced_class_implementing_interface_call_parent_constructor.phpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/namespaced_class_implementing_interface_dont_call_parent_constructor.phpt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/namespaced_class_implementing_interface_dont_call_parent_constructor.phpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/namespaced_class_partial.phpt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/namespaced_class_partial.phpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/namespaced_interface.phpt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/namespaced_interface.phpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/nonexistent_class.phpt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/nonexistent_class.phpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/nonexistent_class_with_namespace.phpt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/nonexistent_class_with_namespace.phpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/nonexistent_class_with_namespace_starting_with_separator.phpt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/nonexistent_class_with_namespace_starting_with_separator.phpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/nullable_types.phpt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/nullable_types.phpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/proxy.phpt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/proxy.phpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/return_type_declarations_closure.phpt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/return_type_declarations_closure.phpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/return_type_declarations_final.phpt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/return_type_declarations_final.phpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/return_type_declarations_generator.phpt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/return_type_declarations_generator.phpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/return_type_declarations_nullable.phpt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/return_type_declarations_nullable.phpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/return_type_declarations_object_method.phpt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/return_type_declarations_object_method.phpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/return_type_declarations_parent.phpt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/return_type_declarations_parent.phpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/return_type_declarations_self.phpt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/return_type_declarations_self.phpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/return_type_declarations_static_method.phpt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/return_type_declarations_static_method.phpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/return_type_declarations_void.phpt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/return_type_declarations_void.phpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/scalar_type_declarations.phpt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/scalar_type_declarations.phpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/wsdl_class_namespace.phpt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Generator/wsdl_class_namespace.phpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/GeneratorTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/GeneratorTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Invocation/StaticInvocationTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/Invocation/StaticInvocationTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/MockObjectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/MockObjectTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/.github/CODE_OF_CONDUCT.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/.github/CODE_OF_CONDUCT.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/.github/CONTRIBUTING.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/.github/CONTRIBUTING.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/.php_cs.dist" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/.php_cs.dist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/ChangeLog-7.0.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/ChangeLog-7.0.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/phpunit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/phpunit.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/phpunit.xsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Assert.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Assert.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Assert/Functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Assert/Functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/AssertionFailedError.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/AssertionFailedError.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/ArrayHasKey.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/ArrayHasKey.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/ArraySubset.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/ArraySubset.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/Attribute.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/Attribute.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/ClassHasAttribute.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/ClassHasAttribute.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/ClassHasStaticAttribute.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/ClassHasStaticAttribute.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/Composite.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/Composite.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/Constraint.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/Constraint.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/Count.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/Count.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/DirectoryExists.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/DirectoryExists.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/Exception.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/Exception.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/ExceptionCode.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/ExceptionCode.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/ExceptionMessage.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/ExceptionMessage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/ExceptionMessageRegularExpression.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/ExceptionMessageRegularExpression.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/FileExists.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/FileExists.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/GreaterThan.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/GreaterThan.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/IsAnything.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/IsAnything.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/IsEmpty.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/IsEmpty.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/IsEqual.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/IsEqual.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/IsFalse.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/IsFalse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/IsFinite.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/IsFinite.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/IsIdentical.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/IsIdentical.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/IsInfinite.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/IsInfinite.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/IsInstanceOf.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/IsInstanceOf.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/IsJson.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/IsJson.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/IsNan.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/IsNan.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/IsNull.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/IsNull.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/IsReadable.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/IsReadable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/IsTrue.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/IsTrue.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/IsType.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/IsType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/IsWritable.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/IsWritable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/JsonMatches.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/JsonMatches.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/JsonMatchesErrorMessageProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/JsonMatchesErrorMessageProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/LessThan.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/LessThan.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/LogicalAnd.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/LogicalAnd.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/LogicalNot.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/LogicalNot.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/LogicalOr.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/LogicalOr.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/LogicalXor.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/LogicalXor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/ObjectHasAttribute.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/ObjectHasAttribute.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/RegularExpression.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/RegularExpression.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/SameSize.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/SameSize.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/StringContains.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/StringContains.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/StringEndsWith.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/StringEndsWith.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/StringMatchesFormatDescription.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/StringMatchesFormatDescription.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/StringStartsWith.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/StringStartsWith.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/TraversableContains.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/TraversableContains.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/TraversableContainsOnly.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/TraversableContainsOnly.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Error/Error.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Error/Error.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Exception.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Exception.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/ExceptionWrapper.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/ExceptionWrapper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/ExpectationFailedException.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/ExpectationFailedException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/IncompleteTestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/IncompleteTestCase.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/SelfDescribing.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/SelfDescribing.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/SkippedTestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/SkippedTestCase.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/SyntheticError.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/SyntheticError.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/TestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/TestCase.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/TestFailure.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/TestFailure.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/TestListener.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/TestListener.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/TestResult.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/TestResult.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/TestSuite.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/TestSuite.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/TestSuiteIterator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/TestSuiteIterator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Warning.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Warning.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/WarningTestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/WarningTestCase.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Runner/BaseTestRunner.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Runner/BaseTestRunner.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Runner/Filter/ExcludeGroupFilterIterator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Runner/Filter/ExcludeGroupFilterIterator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Runner/Filter/Factory.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Runner/Filter/Factory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Runner/Filter/GroupFilterIterator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Runner/Filter/GroupFilterIterator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Runner/Filter/IncludeGroupFilterIterator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Runner/Filter/IncludeGroupFilterIterator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Runner/Filter/NameFilterIterator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Runner/Filter/NameFilterIterator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Runner/PhptTestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Runner/PhptTestCase.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Runner/StandardTestSuiteLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Runner/StandardTestSuiteLoader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Runner/TestSuiteLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Runner/TestSuiteLoader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Runner/Version.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Runner/Version.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/TextUI/Command.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/TextUI/Command.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/TextUI/ResultPrinter.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/TextUI/ResultPrinter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/TextUI/TestRunner.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/TextUI/TestRunner.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/Blacklist.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/Blacklist.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/Configuration.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/Configuration.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/ConfigurationGenerator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/ConfigurationGenerator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/ErrorHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/ErrorHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/FileLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/FileLoader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/Filesystem.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/Filesystem.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/Getopt.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/Getopt.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/GlobalState.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/GlobalState.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/InvalidArgumentHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/InvalidArgumentHelper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/Json.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/Json.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/Log/JUnit.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/Log/JUnit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/Log/TeamCity.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/Log/TeamCity.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/PHP/AbstractPhpProcess.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/PHP/AbstractPhpProcess.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/PHP/DefaultPhpProcess.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/PHP/DefaultPhpProcess.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/PHP/WindowsPhpProcess.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/PHP/WindowsPhpProcess.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/Printer.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/Printer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/RegularExpression.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/RegularExpression.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/Test.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/Test.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/TestDox/CliTestDoxPrinter.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/TestDox/CliTestDoxPrinter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/TestDox/HtmlResultPrinter.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/TestDox/HtmlResultPrinter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/TestDox/NamePrettifier.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/TestDox/NamePrettifier.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/TestDox/ResultPrinter.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/TestDox/ResultPrinter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/TestDox/TextResultPrinter.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/TestDox/TextResultPrinter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/TestDox/XmlResultPrinter.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/TestDox/XmlResultPrinter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/Type.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/Type.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/Xml.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/src/Util/Xml.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/tests/Framework/AssertTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/tests/Framework/AssertTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/tests/Framework/Constraint/ArraySubsetTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/tests/Framework/Constraint/ArraySubsetTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/tests/Framework/Constraint/CallbackTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/tests/Framework/Constraint/CallbackTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/tests/Framework/Constraint/IsJsonTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/tests/Framework/Constraint/IsJsonTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/tests/Framework/Constraint/IsTypeTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/tests/Framework/Constraint/IsTypeTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/tests/Framework/Constraint/JsonMatchesErrorMessageProviderTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/tests/Framework/Constraint/JsonMatchesErrorMessageProviderTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/tests/Framework/Constraint/JsonMatchesTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/tests/Framework/Constraint/JsonMatchesTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/tests/Framework/TestCaseTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/tests/Framework/TestCaseTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/tests/Framework/TestSuiteTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/tests/Framework/TestSuiteTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/tests/Util/ConfigurationGeneratorTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/tests/Util/ConfigurationGeneratorTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/tests/Util/XmlTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/tests/Util/XmlTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit/tests/_files/SampleArrayAccess.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit/tests/_files/SampleArrayAccess.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/StreamBuffer.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/StreamBuffer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Tests/AbstractEventDispatcherTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Tests/AbstractEventDispatcherTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/finder/Finder.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/finder/Finder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/finder/SplFileInfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/finder/SplFileInfo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/finder/Tests/FinderTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/finder/Tests/FinderTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Debug/FileLinkFormatter.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Debug/FileLinkFormatter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/routing/Matcher/Dumper/PhpMatcherDumper.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/routing/Matcher/Dumper/PhpMatcherDumper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/routing/Matcher/UrlMatcher.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/routing/Matcher/UrlMatcher.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher0.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher0.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher1.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher1.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher2.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher3.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher3.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher5.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher5.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher6.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher6.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher7.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher7.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Matcher/UrlMatcherTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Matcher/UrlMatcherTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/Tests/Caster/ExceptionCasterTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/Tests/Caster/ExceptionCasterTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/Tests/Dumper/HtmlDumperTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/Tests/Dumper/HtmlDumperTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/tcg/voyager/publishable/database/seeds/DataRowsTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/tcg/voyager/publishable/database/seeds/DataRowsTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/tcg/voyager/publishable/database/seeds/DataTypesTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/tcg/voyager/publishable/database/seeds/DataTypesTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/tcg/voyager/publishable/database/seeds/MenuItemsTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/tcg/voyager/publishable/database/seeds/MenuItemsTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/tcg/voyager/publishable/database/seeds/RolesTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/tcg/voyager/publishable/database/seeds/RolesTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/tcg/voyager/publishable/database/seeds/SettingsTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/tcg/voyager/publishable/database/seeds/SettingsTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/tcg/voyager/publishable/lang/en/voyager.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/tcg/voyager/publishable/lang/en/voyager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/tcg/voyager/publishable/lang/fr/voyager.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/tcg/voyager/publishable/lang/fr/voyager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/tcg/voyager/publishable/lang/pt/voyager.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/tcg/voyager/publishable/lang/pt/voyager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/tcg/voyager/publishable/lang/ru/voyager.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/tcg/voyager/publishable/lang/ru/voyager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/tcg/voyager/publishable/lang/tr/voyager.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/tcg/voyager/publishable/lang/tr/voyager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/tcg/voyager/publishable/lang/uk/voyager.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/tcg/voyager/publishable/lang/uk/voyager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/tcg/voyager/publishable/lang/zh_CN/voyager.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/tcg/voyager/publishable/lang/zh_CN/voyager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/tcg/voyager/resources/views/bread/browse.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/tcg/voyager/resources/views/bread/browse.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/tcg/voyager/resources/views/bread/edit-add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/tcg/voyager/resources/views/bread/edit-add.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/tcg/voyager/resources/views/formfields/image.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/tcg/voyager/resources/views/formfields/image.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/tcg/voyager/resources/views/formfields/multiple_images.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/tcg/voyager/resources/views/formfields/multiple_images.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/tcg/voyager/resources/views/menu/admin_menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/tcg/voyager/resources/views/menu/admin_menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/tcg/voyager/resources/views/menus/browse.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/tcg/voyager/resources/views/menus/browse.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/tcg/voyager/resources/views/settings/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/tcg/voyager/resources/views/settings/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/tcg/voyager/resources/views/tools/database/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/tcg/voyager/resources/views/tools/database/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/tcg/voyager/resources/views/tools/database/vue-components/database-column.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/tcg/voyager/resources/views/tools/database/vue-components/database-column.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/tcg/voyager/resources/views/tools/database/vue-components/database-types.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/tcg/voyager/resources/views/tools/database/vue-components/database-types.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/tcg/voyager/src/Http/Controllers/VoyagerMediaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/tcg/voyager/src/Http/Controllers/VoyagerMediaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/tcg/voyager/src/Traits/Translatable.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/tcg/voyager/src/Traits/Translatable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/tcg/voyager/src/VoyagerServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/tcg/voyager/src/VoyagerServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/tcg/voyager/tests/WidgetTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/tcg/voyager/tests/WidgetTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,213 +289,98 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.47858474">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="ScheduleController.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ScheduleController.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="112">
-                  <caret line="77" column="27" selection-start-line="77" selection-start-column="27" selection-end-line="77" selection-end-column="27" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="TransactionController.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TransactionController.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="344">
-                  <caret line="91" column="33" lean-forward="true" selection-start-line="91" selection-start-column="33" selection-end-line="91" selection-end-column="33" />
-                  <folding>
-                    <element signature="e#40#63#0#PHP" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/.gitignore">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-          <file leaf-file-name="2018_03_26_023335_create_transactions_table.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/database/migrations/2018_03_26_023335_create_transactions_table.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="177">
-                  <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="CreditCardController.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CreditCardController.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="327">
-                  <caret line="115" column="40" selection-start-line="115" selection-start-column="40" selection-end-line="115" selection-end-column="40" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="CustomerController.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CustomerController.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="242">
-                  <caret line="85" column="27" selection-start-line="85" selection-start-column="19" selection-end-line="85" selection-end-column="27" />
-                  <folding>
-                    <element signature="e#40#68#0#PHP" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ReservedSeatsController.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ReservedSeatsController.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="208">
-                  <caret line="78" column="32" selection-start-line="78" selection-start-column="32" selection-end-line="78" selection-end-column="32" />
-                  <folding>
-                    <element signature="e#40#68#0#PHP" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="PromoController.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PromoController.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="106">
-                  <caret line="78" column="24" selection-start-line="78" selection-start-column="24" selection-end-line="78" selection-end-column="24" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="RoomTypeController.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Http/Controllers/RoomTypeController.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="106">
-                  <caret line="77" column="27" selection-start-line="77" selection-start-column="27" selection-end-line="77" selection-end-column="27" />
-                  <folding>
-                    <element signature="e#40#68#0#PHP" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="MovieController.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MovieController.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="208">
-                  <caret line="80" column="24" selection-start-line="80" selection-start-column="24" selection-end-line="80" selection-end-column="24" />
-                  <folding>
-                    <element signature="e#40#68#0#PHP" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="CreditCard.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Models/CreditCard.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="153">
-                  <caret line="9" column="41" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="41" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Customer.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Models/Customer.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="153">
-                  <caret line="9" column="47" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="47" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="RoomType.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Models/RoomType.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="272">
-                  <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Theatre.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Models/Theatre.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="153">
-                  <caret line="9" column="66" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="66" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Transaction.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/Models/Transaction.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="347">
-                  <caret line="22" column="10" lean-forward="true" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="AllSeats.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Models/AllSeats.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="170">
-                  <caret line="10" selection-start-line="10" selection-end-line="10" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Cinema.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Models/Cinema.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="153">
-                  <caret line="9" column="73" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="73" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Promo.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Models/Promo.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ReservedSeats.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Models/ReservedSeats.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="115">
-                  <caret line="9" column="68" selection-start-line="9" selection-start-column="57" selection-end-line="9" selection-end-column="68" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Schedule.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Models/Schedule.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="381">
-                  <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="2018_03_26_023320_create_schedules_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2018_03_26_023320_create_schedules_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="18" column="25" lean-forward="true" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2018_03_26_023334_create_promos_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2018_03_26_023334_create_promos_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-183" />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2018_03_26_023335_create_transactions_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2018_03_26_023335_create_transactions_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-251" />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2018_03_28_022618_create_all_seats_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2018_03_28_022618_create_all_seats_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-149" />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2018_03_28_022638_create_reserved_seats_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2018_03_28_022638_create_reserved_seats_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-200" />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2018_04_09_052514_create_user_verifications_table.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2018_04_09_052514_create_user_verifications_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="395">
+              <caret line="33" column="32" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2018_03_26_012618_create_cinemas_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2018_03_26_012618_create_cinemas_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-187" />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2018_03_26_012806_create_movies_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2018_03_26_012806_create_movies_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-238" />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2018_03_26_023318_create_room_types_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2018_03_26_023318_create_room_types_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-149" />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2018_03_26_023319_create_theatres_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2018_03_26_023319_create_theatres_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-183" />
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>add</find>
       <find>addResource</find>
       <find>debug</find>
+      <find>providers</find>
+      <find>fromuser</find>
+      <find>socket</find>
+      <find>user::</find>
+      <find>app\</find>
+      <find>user</find>
+      <find>validate</find>
+      <find>admin</find>
+      <find>auth</find>
+      <find>users</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -230,44 +389,24 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Models/RoomType.php" />
-        <option value="$PROJECT_DIR$/app/Models/User.php" />
-        <option value="$PROJECT_DIR$/app/Models/Cinema.php" />
-        <option value="$PROJECT_DIR$/app/Models/Theatre.php" />
-        <option value="$PROJECT_DIR$/app/Models/ReservedSeats.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
-        <option value="$PROJECT_DIR$/app/Models/AllSeats.php" />
-        <option value="$PROJECT_DIR$/app/Models/CreditCard.php" />
-        <option value="$PROJECT_DIR$/config/database.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_03_26_012740_create_users_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_03_26_012618_create_cinemas_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_03_26_023319_create_room_types_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_03_27_041305_create_theatres_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_03_27_042301_create_promos_table.php" />
-        <option value="$PROJECT_DIR$/config/app.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/database/migrations/2018_03_26_012806_create_movies_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_03_26_023224_create_credit_cards_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_03_26_023318_create_room_types_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_03_26_023319_create_theatres_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_03_26_023320_create_schedules_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_03_28_022618_create_all_seats_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_03_28_022638_create_reserved_seats_table.php" />
         <option value="$PROJECT_DIR$/app/User.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_03_26_012740_create_customers_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_03_26_023334_create_promos_table.php" />
         <option value="$PROJECT_DIR$/app/Models/Promo.php" />
-        <option value="$PROJECT_DIR$/routes/api.php" />
         <option value="$PROJECT_DIR$/app/Models/Schedule.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AllSeatsController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/CinemaController.php" />
-        <option value="$PROJECT_DIR$/app/Models/Customer.php" />
         <option value="$PROJECT_DIR$/app/Models/Movie.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/CustomerController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/CreditCardController.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_03_26_023335_create_transactions_table.php" />
         <option value="$PROJECT_DIR$/app/Models/Transaction.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/TheatreController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ScheduleController.php" />
@@ -277,6 +416,30 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/MovieController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/TransactionController.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_03_26_023335_create_transactions_table.php" />
+        <option value="$PROJECT_DIR$/vendor/tymon/jwt-auth/src/Commands/JWTGenerateCommand.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/CustomerController.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/config/app.php" />
+        <option value="$PROJECT_DIR$/routes/api.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/resources/views/verify.blade.php" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/StreamBuffer.php" />
+        <option value="$PROJECT_DIR$/app/Models/Customer.php" />
+        <option value="$PROJECT_DIR$/config/jwt.php" />
+        <option value="$PROJECT_DIR$/vendor/tcg/voyager/src/Http/Controllers/VoyagerAuthController.php" />
+        <option value="$PROJECT_DIR$/config/voyager.php" />
+        <option value="$PROJECT_DIR$/vendor/tcg/voyager/src/Models/User.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_03_26_012740_create_customers_table.php" />
+        <option value="$PROJECT_DIR$/config/auth.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Kernel.php" />
+        <option value="$PROJECT_DIR$/app/Http/Middleware/identifyUser.php" />
+        <option value="$PROJECT_DIR$/vendor/tymon/jwt-auth/src/Http/Middleware/Authenticate.php" />
+        <option value="$PROJECT_DIR$/vendor/tymon/jwt-auth/src/Providers/Auth/Illuminate.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_03_26_023320_create_schedules_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_04_09_052514_create_user_verifications_table.php" />
       </list>
     </option>
   </component>
@@ -382,13 +545,17 @@
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
       <path value="$PROJECT_DIR$/vendor/intervention/image" />
       <path value="$PROJECT_DIR$/vendor/justinrainbow/json-schema" />
+      <path value="$PROJECT_DIR$/vendor/namshi/jose" />
+      <path value="$PROJECT_DIR$/vendor/tymon/jwt-auth" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-util" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php56" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-446" />
-    <option name="y" value="-17" />
-    <option name="width" value="1036" />
-    <option name="height" value="688" />
+    <option name="x" value="282" />
+    <option name="y" value="-11" />
+    <option name="width" value="669" />
+    <option name="height" value="723" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -396,6 +563,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -411,25 +579,6 @@
             <path>
               <item name="FinalProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="FinalProject" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="FinalProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FinalProject" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="FinalProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FinalProject" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Models" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="FinalProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FinalProject" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -440,17 +589,16 @@
             </path>
             <path>
               <item name="FinalProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FinalProject" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="routes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="illuminate\contracts\auth&#9;FILE&#9;file://D:/Jeff_v2/COMP SCI/gitHub/web_applications_finproj/FinalProject/vendor/laravel/framework/src/Illuminate/Contracts/Auth&#10;admin&#9;null&#9;null&#10;authenticates&#9;null&#9;null&#10;user&#9;FILE&#9;file://D:/Jeff_v2/COMP SCI/gitHub/web_applications_finproj/FinalProject/vendor/laravel/framework/src/Illuminate/Auth/EloquentUserProvider.php" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -491,16 +639,17 @@
       <workItem from="1522900578365" duration="3456000" />
       <workItem from="1522907575648" duration="11493000" />
       <workItem from="1523009667081" duration="3185000" />
-      <workItem from="1523036795338" duration="4919000" />
+      <workItem from="1523036795338" duration="7668000" />
+      <workItem from="1523177593124" duration="8737000" />
+      <workItem from="1523250798747" duration="37606000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76613000" />
+    <option name="totallyTimeSpent" value="125705000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32857144" />
@@ -509,7 +658,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2137628" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19985358" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -536,386 +685,347 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/RoomTypeController.php">
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="43" lean-forward="true" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
+        <state relative-caret-position="1248">
+          <caret line="139" column="20" selection-start-line="139" selection-start-column="20" selection-end-line="139" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/tymon/jwt-auth/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3457">
+          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/voyager.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/tcg/voyager/src/Models/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
           <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
+            <element signature="e#38#56#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CinemaController.php">
+    <entry file="file://$PROJECT_DIR$/config/jwt.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/RoomType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/RoomTypeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
-          <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CinemaController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/RoomType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/RoomTypeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
-          <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Routing/ResourceRegistrar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1562">
-          <caret line="220" column="34" selection-start-line="220" selection-start-column="23" selection-end-line="220" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env.example">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+        <state relative-caret-position="712">
+          <caret line="151" column="61" selection-start-line="151" selection-start-column="61" selection-end-line="151" selection-end-column="61" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/app.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" column="38" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
+        <state relative-caret-position="1421">
+          <caret line="220" selection-start-line="220" selection-end-line="220" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa0.551/auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1543" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-119">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#45#81#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Exceptions/Handler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-306" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa0.665/User.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/tymon/jwt-auth/src/Http/Parser/Parser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1020">
+          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/tymon/jwt-auth/src/Facades/JWTAuth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/tymon/jwt-auth/src/Console/JWTGenerateSecretCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="61" column="57" lean-forward="true" selection-start-line="61" selection-start-column="57" selection-end-line="61" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/tymon/jwt-auth/src/Http/Middleware/Check.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/tymon/jwt-auth/src/Http/Middleware/RefreshToken.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/Core/Core_c.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="559" column="12" selection-start-line="559" selection-start-column="12" selection-end-line="559" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/tymon/jwt-auth/src/Payload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="102" column="20" selection-start-line="102" selection-start-column="20" selection-end-line="102" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/tymon/jwt-auth/src/JWTAuth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="63" column="27" selection-start-line="63" selection-start-column="27" selection-end-line="63" selection-end-column="27" />
+          <folding>
+            <element signature="e#7#219#0#PHP" expanded="true" />
+            <element signature="e#247#284#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/tymon/jwt-auth/src/JWT.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="192" column="32" selection-start-line="192" selection-start-column="32" selection-end-line="192" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/tymon/jwt-auth/src/Manager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="98" column="20" selection-start-line="98" selection-start-column="20" selection-end-line="98" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/EncryptCookies.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/tymon/jwt-auth/src/Http/Middleware/AuthenticateAndRenew.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+          <folding>
+            <element signature="e#7#219#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/identifyUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+          <folding>
+            <element signature="e#39#51#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/EloquentUserProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-306" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/GuardHelpers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-221">
+          <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="127" column="13" lean-forward="true" selection-start-line="127" selection-start-column="13" selection-end-line="127" selection-end-column="13" />
+          <folding>
+            <element signature="e#39#72#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/tymon/jwt-auth/src/Http/Middleware/BaseMiddleware.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="64" column="20" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
+          <folding>
+            <element signature="e#263#289#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+          <folding>
+            <element signature="e#39#51#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Contracts/Auth/Guard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-289">
+          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/tymon/jwt-auth/src/Contracts/Providers/Auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Contracts/Auth/Factory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" selection-start-line="12" selection-end-line="12" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="66" column="13" selection-start-line="66" selection-start-column="13" selection-end-line="66" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/tymon/jwt-auth/src/Http/Middleware/Authenticate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+          <folding>
+            <element signature="e#7#219#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/tymon/jwt-auth/src/Providers/Auth/Illuminate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="48" column="5" lean-forward="true" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+          <folding>
+            <element signature="e#262#305#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_03_26_023318_create_room_types_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="26" column="46" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_03_26_023319_create_theatres_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_03_26_023320_create_schedules_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="29" column="45" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_03_28_022618_create_all_seats_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_03_28_022638_create_reserved_seats_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_03_26_012806_create_movies_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="32" column="42" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_03_26_023224_create_credit_cards_table.php">
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/SessionGuard.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
-          <caret line="25" column="71" selection-start-line="25" selection-start-column="71" selection-end-line="25" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storage/logs/laravel.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-36775" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_03_26_012618_create_cinemas_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_03_26_012740_create_customers_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_03_26_023334_create_promos_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="25" column="11" lean-forward="true" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
+          <caret line="244" selection-start-line="244" selection-end-line="244" />
+          <folding>
+            <element signature="e#35#56#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/api.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        <state relative-caret-position="401">
+          <caret line="38" column="37" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CinemaController.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_03_26_023224_create_credit_cards_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1292">
-          <caret line="77" column="8" selection-start-line="77" selection-start-column="8" selection-end-line="107" selection-end-column="9" />
-          <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="-217" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_03_26_012740_create_customers_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="46" column="39" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/ReservedSeats.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_03_26_012618_create_cinemas_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="9" column="68" selection-start-line="9" selection-start-column="57" selection-end-line="9" selection-end-column="68" />
+        <state relative-caret-position="-187" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_03_26_012806_create_movies_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-238" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_03_26_023318_create_room_types_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-149" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_03_26_023319_create_theatres_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-183" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_03_26_023320_create_schedules_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="18" column="25" lean-forward="true" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Cinema.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_03_26_023334_create_promos_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="73" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Movie.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="42" lean-forward="true" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/AllSeats.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Customer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="47" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Promo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/CreditCard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="41" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/RoomType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Schedule.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AllSeatsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="78" column="8" selection-start-line="78" selection-start-column="8" selection-end-line="99" selection-end-column="9" />
-          <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Theatre.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="66" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TheatreController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ScheduleController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="77" column="27" selection-start-line="77" selection-start-column="27" selection-end-line="77" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/RoomTypeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="77" column="27" selection-start-line="77" selection-start-column="27" selection-end-line="77" selection-end-column="27" />
-          <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ReservedSeatsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="78" column="32" selection-start-line="78" selection-start-column="32" selection-end-line="78" selection-end-column="32" />
-          <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PromoController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="78" column="24" selection-start-line="78" selection-start-column="24" selection-end-line="78" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MovieController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="80" column="24" selection-start-line="80" selection-start-column="24" selection-end-line="80" selection-end-column="24" />
-          <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CustomerController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="85" column="27" selection-start-line="85" selection-start-column="19" selection-end-line="85" selection-end-column="27" />
-          <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CreditCardController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="115" column="40" selection-start-line="115" selection-start-column="40" selection-end-line="115" selection-end-column="40" />
-        </state>
+        <state relative-caret-position="-183" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2018_03_26_023335_create_transactions_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-        </state>
+        <state relative-caret-position="-251" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Transaction.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_03_28_022618_create_all_seats_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="22" column="10" lean-forward="true" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
-        </state>
+        <state relative-caret-position="-149" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TransactionController.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_03_28_022638_create_reserved_seats_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="91" column="33" lean-forward="true" selection-start-line="91" selection-start-column="33" selection-end-line="91" selection-end-column="33" />
-          <folding>
-            <element signature="e#40#63#0#PHP" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-200" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_04_09_052514_create_user_verifications_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="33" column="32" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

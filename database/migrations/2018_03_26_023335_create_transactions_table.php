@@ -23,7 +23,7 @@ class CreateTransactionsTable extends Migration
 
             $table->primary('id');
             $table->foreign('user_id')->references('id')->on('customers');
-            $table->foreign('schedule_id')->references('id')->on('schedules');
+//            $table->foreign('schedule_id')->references('id')->on('schedules');
             $table->foreign('promo_id')->references('id')->on('promos');
 
             $table->timestamps();

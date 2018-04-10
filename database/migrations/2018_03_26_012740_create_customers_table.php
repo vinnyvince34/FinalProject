@@ -18,11 +18,11 @@ class CreateCustomersTable extends Migration
             $table->uuid('preferred_cinema_id');
             $table->string('name');
             $table->string('gender', 1);
-            $table->date('birth_date');
+            $table->string('birth_date');
             $table->string('phone_number');
             $table->string('city');
             $table->string('email')->unique();
-            $table->string('password'); 
+            $table->string('password');
             
             $table->primary('id');
             $table->foreign('preferred_cinema_id')
@@ -44,6 +44,6 @@ class CreateCustomersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('customers');
     }
 }

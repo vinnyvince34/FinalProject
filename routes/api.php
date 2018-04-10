@@ -21,7 +21,7 @@ Route::middleware('auth:api')->get('/item', function (Request $request) {
     return $request->item();
 });
 
-Route::resource('user', 'CustomerController');
+Route::resource('customer', 'CustomerController');
 Route::resource('credit_card', 'CreditCardController');
 Route::resource('cinema', 'CinemaController');
 Route::resource('movie', 'MovieController');
@@ -32,3 +32,13 @@ Route::resource('all_seats', 'AllSeatsController');
 Route::resource('transaction', 'TransactionController');
 Route::resource('reserved_seats', 'ReservedSeatsController');
 Route::resource('promo', 'PromoController');
+
+Route::post('register', 'AuthController@register');
+Route::post('login', 'AuthController@login');
+Route::post('recover', 'AuthController@recover');
+Route::group(['middleware' => ['jwt.auth']], function() {
+    Route::get('logout', 'AuthController@logout');
+    Route::get('test', function(){
+        return response()->json(['foo'=>'bar']);
+    });
+});
