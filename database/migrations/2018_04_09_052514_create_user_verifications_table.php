@@ -14,10 +14,10 @@ class CreateUserVerificationsTable extends Migration
     {
         Schema::create('user_verifications', function (Blueprint $table) {
             $table->increments('id');
-            $table->uuid('user_id');
+            $table->uuid('customer_id');
             $table->string('token');
 
-            $table->foreign('user_id')->references('id')->on('customers')->onDelete('cascade');
+            $table->foreign('customer_id')->references('id')->on('customers')->onDelete('cascade');
         });
         Schema::table('customers', function (Blueprint $table) {
             $table->boolean('is_verified')->default(0);

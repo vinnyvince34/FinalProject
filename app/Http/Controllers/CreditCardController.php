@@ -147,4 +147,21 @@ class CreditCardController extends Controller
             );
         }
     }
+
+    public function byCustomer($id){
+        try{
+            $var = CreditCard::select('id', 'last_name')
+                            ->where('customer_id', '=', $id)
+                            ->get();
+
+                return response(
+                    $var,200
+                );
+
+        }catch(\Exception $e){
+            return response(
+                $e->getMessage(), 400
+            );
+        }
+    }
 }

@@ -15,7 +15,7 @@ class CreateCreditCardsTable extends Migration
     {
         Schema::create('credit_cards', function (Blueprint $table) {
             $table->string('id', 8)->unique(); // first 8 digits of credit card number
-            $table->uuid('user_id');
+            $table->uuid('customer_id');
             $table->string('first_name');
             $table->string('last_name');
             $table->string('address');
@@ -23,7 +23,7 @@ class CreateCreditCardsTable extends Migration
             $table->string('city');
 
             $table->primary('id');
-            $table->foreign('user_id')->references('id')->on('customers');
+            $table->foreign('customer_id')->references('id')->on('customers');
             $table->timestamps();
         });
 

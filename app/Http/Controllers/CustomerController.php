@@ -61,7 +61,8 @@ class CustomerController extends Controller
     {
         try{
 
-            $var = Customer::findOrFail($id);
+            $var = Customer::findOrFail($id)
+                            ->join('cinemas', 'cinemas.id', '=', 'customers.preferred_cinema_id');
 
             return response([$var], 200);
 

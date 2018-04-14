@@ -24,6 +24,7 @@ class CreateMoviesTable extends Migration
             $table->string('synopsis');
             $table->string('image_url');
             $table->string('trailer_url');
+            $table->string('status'); // np, cs, lw (lewat)
 
             $table->primary('id');
             $table->timestamps();

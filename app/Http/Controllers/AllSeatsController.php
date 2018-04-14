@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\AllSeats;
+use Illuminate\Support\Facades\DB;
 
 class AllSeatsController extends Controller
 {
@@ -116,6 +117,24 @@ class AllSeatsController extends Controller
                     "Successful",200
                 );
             }
+        }catch(\Exception $e){
+            return response(
+                $e->getMessage(), 400
+            );
+        }
+    }
+
+    public function bySchedule($id){
+        try{
+            $var = AllSeats::select('seats.id as seat_id', 'seats.seat_number as seat_number') //ni gw udah opernya cuman seat_id sm seat_numbernya
+                    ->join('theatres', 'theatres.id', '=', 'all_seats.theatre_id')
+                    ->where('theatres.id', '=', DB::raw("SELECT theatre_id FROM schedules WHERE id = \"{$id}\";"))
+                    ->whereNotIn('seats.id', DB::raw("SELECT rs.seat_id FROM reserved_seats as rs, schedules as sc WHERE sc.schedule_id = \" {$id} \";"))
+                    ->get();
+                return response(
+                    $var,200
+                );
+
         }catch(\Exception $e){
             return response(
                 $e->getMessage(), 400

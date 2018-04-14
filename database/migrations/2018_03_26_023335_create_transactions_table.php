@@ -15,14 +15,14 @@ class CreateTransactionsTable extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->uuid('id'); // transaction_id
-            $table->uuid('user_id');
+            $table->uuid('customer_id');
 //            $table->uuid('schedule_id');
             $table->tinyInteger('quantity');
             $table->integer('total_price');
             $table->uuid('promo_id');
 
             $table->primary('id');
-            $table->foreign('user_id')->references('id')->on('customers');
+            $table->foreign('customer_id')->references('id')->on('customers');
 //            $table->foreign('schedule_id')->references('id')->on('schedules');
             $table->foreign('promo_id')->references('id')->on('promos');
 

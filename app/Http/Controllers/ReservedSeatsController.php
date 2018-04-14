@@ -4,9 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\ReservedSeats;
+use App\Traits\SomeStoreTraits;
+
 
 class ReservedSeatsController extends Controller
 {
+    use SomeStoreTraits;
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +17,9 @@ class ReservedSeatsController extends Controller
      */
     public function index()
     {
-        return ReservedSeats::all();
+        return response(
+            ReservedSeats::all()
+        );
     }
 
     /**
@@ -23,26 +28,37 @@ class ReservedSeatsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        try{
-            $new = $this->validate($request, [
-                'name' => 'required|min:3|max:50',
-                'description' => 'required|numeric',
-                'value' => 'required|min:3',
-                'image_url' => 'required|min:3'
-            ]);
+//    public function store(Request $request)
+//    {
+//        try{
+//            $new = $this->validate($request, [
+//                'name' => 'required|min:3|max:50',
+//                'description' => 'required|numeric',
+//                'value' => 'required|min:3',
+//                'image_url' => 'required|min:3'
+//            ]);
+//
+//            ReservedSeats::create($new);
+//
+//            return response(["Successful!"]);
+//
+//        } catch(\Exception $e){
+//
+//            return response([
+//                $e->getMessage()
+//            ]);
+//        }
+//    }
 
-            ReservedSeats::create($new);
+    public function store(Request $request){
+        if($this->storeReservedSeats($request))
+            return response(
+                "Successful!", 200
+            );
 
-            return response(["Successful!"]);
-
-        } catch(\Exception $e){
-
-            return response([
-                $e->getMessage()
-            ]);
-        }
+        return response(
+            "Failed", 400
+        );
     }
 
     /**

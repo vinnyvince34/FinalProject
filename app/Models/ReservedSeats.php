@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class ReservedSeats extends Model
 {
-    protected $table = "transactions";
+    protected $table = "reserved_seats";
     protected $fillable = ['seat_id', 'transaction_id', 'schedule_id'];
 
     protected $casts = ['id' => 'string'];

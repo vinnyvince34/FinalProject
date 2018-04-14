@@ -5,9 +5,11 @@ namespace App\Http\Controllers;
 use App\Models\Theatre;
 use Illuminate\Http\Request;
 use App\Models\Transaction;
+use App\Traits\SomeStoreTraits;
 
 class TransactionController extends Controller
 {
+    use SomeStoreTraits;
     /**
      * Display a listing of the resource.
      *
@@ -15,7 +17,9 @@ class TransactionController extends Controller
      */
     public function index()
     {
-        return Transaction::all();
+        return response(
+            Transaction::all()
+        );
     }
 
     /**
@@ -24,27 +28,38 @@ class TransactionController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        try{
-            $new = $this->validate($request, [
-                'user_id' => 'required',
-                'schedule_id' => 'required',
-                'quantity' => 'required',
-                'total_price' => 'required',
-                'promo_id' => 'required'
-            ]);
+//    public function store(Request $request)
+//    {
+//        try{
+//            $new = $this->validate($request, [
+//                'user_id' => 'required',
+//                'schedule_id' => 'required',
+//                'quantity' => 'required',
+//                'total_price' => 'required',
+//                'promo_id' => 'required'
+//            ]);
+//
+//            Transaction::create($new);
+//
+//            return response(["Successful!"]);
+//
+//        } catch(\Exception $e){
+//
+//            return response([
+//                $e->getMessage()
+//            ]);
+//        }
+//    }
 
-            Transaction::create($new);
+    public function store(Request $request){
+        if($this->storeTransaction($request))
+            return response(
+                "Successful!", 200
+            );
 
-            return response(["Successful!"]);
-
-        } catch(\Exception $e){
-
-            return response([
-                $e->getMessage()
-            ]);
-        }
+        return response(
+            "Failed", 400
+        );
     }
 
     /**

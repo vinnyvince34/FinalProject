@@ -21,6 +21,7 @@ Route::middleware('auth:api')->get('/item', function (Request $request) {
     return $request->item();
 });
 
+//crud
 Route::resource('customer', 'CustomerController');
 Route::resource('credit_card', 'CreditCardController');
 Route::resource('cinema', 'CinemaController');
@@ -33,12 +34,34 @@ Route::resource('transaction', 'TransactionController');
 Route::resource('reserved_seats', 'ReservedSeatsController');
 Route::resource('promo', 'PromoController');
 
+//display on web
+//Route::get('movie/now_playing/carousel', 'MovieDisplayController@carousel');
+//Route::get('movie/now_playing', 'MovieDisplayController@nowPlaying');
+//Route::get('movie/coming_soon', 'MovieDisplayController@coming_soon');
+
+//user
+Route::get('credit_card/by_customer/{id}', 'CreditCardController@byCustomer');
+
+//seats
+Route::get('all_seats/by_schedule/{id}', 'AllSeatsController@seatBySchedule');
+
+//schedule
+Route::get('schedule/byCity', 'ScheduleController@byCity');
+
+
+
 Route::post('register', 'AuthController@register');
 Route::post('login', 'AuthController@login');
 Route::post('recover', 'AuthController@recover');
+
 Route::group(['middleware' => ['jwt.auth']], function() {
     Route::get('logout', 'AuthController@logout');
     Route::get('test', function(){
         return response()->json(['foo'=>'bar']);
     });
+
+    // Purchase Tickets; record transaction
+    Route::post('purchase', 'PurchaseRecordController@createPurchaseRecord');
+
+
 });

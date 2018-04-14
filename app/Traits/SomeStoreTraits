@@ -1,0 +1,60 @@
+<?php
+
+namespace App\Traits;
+
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Http\Request;
+
+use App\Models\ReservedSeats;
+use App\Models\Transaction;
+
+
+trait SomeStoreTraits {
+
+    use ValidatesRequests;
+
+    public function brandsAll() {
+        // Get all the brands from the Brands Table. example.
+        //$brands = Brand::all();
+        return 'a';
+    }
+
+    public function storeReservedSeats(Request $request){
+        try{
+            $new = $this->validate($request, [
+                'name' => 'required|min:3|max:50',
+                'description' => 'required|numeric',
+                'value' => 'required|min:3',
+                'image_url' => 'required|min:3'
+            ]);
+
+            $new = ReservedSeats::create($new);
+
+            return $new;
+
+        } catch(\Exception $e){
+
+            return null;
+        }
+    }
+
+    public function storeTransaction(Request $request){
+        try{
+            $new = $this->validate($request, [
+                'customer_id' => 'required',
+                'quantity' => 'required',
+                'total_price' => 'required',
+                'promo_id' => 'required'
+            ]);
+
+            $new = Transaction::create($new);
+
+            return $new;
+
+        } catch(\Exception $e){
+
+            return null;
+        }
+    }
+
+}

@@ -15,6 +15,7 @@ class Customer extends Authenticatable implements JWTSubject
 
     protected $casts = ['id' => 'string'];
     protected $primaryKey = "id";
+    protected $hidden = ['password'];
     
     public $incrementing = false;
     

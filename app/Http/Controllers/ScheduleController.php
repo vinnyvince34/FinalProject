@@ -124,4 +124,26 @@ class ScheduleController extends Controller
             );
         }
     }
+
+    public function byCity($id){
+        try{
+            $var = Schedule::where('movie_id', '=', $id)
+                ->leftJoin('theatres', 'theatres.id', '=', 'schedules.theatre_id')
+                ->leftJoin('cinemas', 'cinemas.id', '=', 'cinemas.cinema_id')
+                //->where('cinemas.city', '=', $cityID)
+                ->leftJoin('room_types', 'room_types.id', '=', 'theatres.room_id')
+                ->orderBy('cinemas.cinema_name', 'asc')
+                ->orderBy('theatres.theatre_name', 'asc')
+                ->get();
+
+            return response(
+                    $var,200
+            );
+            
+        }catch(\Exception $e){
+            return response(
+                $e->getMessage(), 400
+            );
+        }
+    }
 }
