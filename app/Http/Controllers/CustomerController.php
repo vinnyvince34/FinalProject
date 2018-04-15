@@ -120,6 +120,7 @@ class CustomerController extends Controller
                 'email' => $request->email,
                 'password' => $request->password
             ]);
+            $var->save();
 
         } catch (\Exception $e) {
 

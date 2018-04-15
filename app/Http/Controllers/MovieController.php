@@ -32,10 +32,14 @@ class MovieController extends Controller
                 'casts' => 'required|min:3',
                 'director' => 'required|min:3',
                 'rating' => 'required',
-                'genre' => 'required|min:3'
+                'genre' => 'required|min:3',
+                'synopsis' => 'required',
+                'image_url' => 'required',
+                'trailer_url' => 'required',
+                'status' => 'required'
             ]);
 
-            RoomType::create($new);
+            Movie::create($new);
 
             return response(["Successful!"]);
 
