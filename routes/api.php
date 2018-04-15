@@ -35,9 +35,9 @@ Route::resource('reserved_seats', 'ReservedSeatsController');
 Route::resource('promo', 'PromoController');
 
 //display on web
-//Route::get('movie/now_playing/carousel', 'MovieDisplayController@carousel');
-//Route::get('movie/now_playing', 'MovieDisplayController@nowPlaying');
-//Route::get('movie/coming_soon', 'MovieDisplayController@coming_soon');
+//Route::get('movie/now_playing/carousel', 'MovieController@carousel');
+//Route::get('movie/now_playing', 'MovieController@nowPlaying');
+//Route::get('movie/coming_soon', 'MovieController@coming_soon');
 
 //user
 Route::get('credit_card/by_customer/{id}', 'CreditCardController@byCustomer');

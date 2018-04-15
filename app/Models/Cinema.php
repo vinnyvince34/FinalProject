@@ -16,7 +16,7 @@ class Cinema extends Model
     
     public function user()
     {
-        return $this->belongsTo('App\Models\Customer', 'preferred_cinema_id');
+        return $this->hasOne('App\Models\Customer', 'preferred_cinema_id');
     }
 
     public function theatre(){

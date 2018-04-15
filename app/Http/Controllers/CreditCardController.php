@@ -27,9 +27,9 @@ class CreditCardController extends Controller
     {
         try{
 
-            $new = $this->validate($request->all(), [
+            $new = $this->validate($request, [
                 'id' => 'required|digits:8|unique:credit_cards,id',
-                'user_id' => 'required',
+                'customer_id' => 'required',
                 'first_name' => 'required',
                 'last_name' => 'required',
                 'address' => 'required',

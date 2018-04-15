@@ -14,7 +14,9 @@ class MovieController extends Controller
      */
     public function index()
     {
-        return Movie::all();
+        return response([
+            Movie::all()
+            ], 200);
     }
 
     /**
@@ -27,23 +29,27 @@ class MovieController extends Controller
     {
         try{
             $new = $this->validate($request, [
-                'movie_name' => 'required|min:3|max:50',
+                'movie_name' => 'required|max:50',
                 'duration' => 'required|numeric',
-                'casts' => 'required|min:3',
-                'director' => 'required|min:3',
+                'casts' => 'required',
+                'director' => 'required',
                 'rating' => 'required',
-                'genre' => 'required|min:3'
+                'genre' => 'required',
+                'synopsis' => 'required',
+                'image_url' => 'required',
+                'trailer_url' => 'required',
+                'status' => 'required'
             ]);
 
-            RoomType::create($new);
+            Movie::create($new);
 
-            return response(["Successful!"]);
+            return response(["Successful!"], 200);
 
         } catch(\Exception $e){
 
             return response([
                 $e->getMessage()
-            ]);
+            ], 400);
         }
     }
 
@@ -149,6 +155,52 @@ class MovieController extends Controller
                     "Successful",200
                 );
             }
+        }catch(\Exception $e){
+            return response(
+                $e->getMessage(), 400
+            );
+        }
+    }
+
+    public function carousel(){
+        try{
+            $var = Movie::where('status', '=', 'np')
+                        ->limit('5');
+
+            return response(
+                [$var],200
+            );
+
+        }catch(\Exception $e){
+            return response(
+                $e->getMessage(), 400
+            );
+        }
+    }
+
+    public function nowPlaying(){
+        try{
+            $var = Movie::where('status', '=', 'np');
+
+            return response(
+                [$var],200
+            );
+
+        }catch(\Exception $e){
+            return response(
+                $e->getMessage(), 400
+            );
+        }
+    }
+
+    public function comingSoon(){
+        try{
+            $var = Movie::where('status', '=', 'cs');
+
+            return response(
+                [$var],200
+            );
+
         }catch(\Exception $e){
             return response(
                 $e->getMessage(), 400

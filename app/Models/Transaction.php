@@ -25,6 +25,6 @@ class Transaction extends Model
     }
 
     public function promo(){
-        return $this->hasOne('App\Models\Promo', 'promo_id');
+        return $this->belongsTo('App\Models\Promo', 'promo_id');
     }
 }

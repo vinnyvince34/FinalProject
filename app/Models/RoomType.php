@@ -15,6 +15,6 @@ class RoomType extends Model
     public $incrementing = false;
 
     public function theatre(){
-        return $this->belongsTo('App\Models\Theatre', 'type_id');
+        return $this->hasMany('App\Models\Theatre', 'type_id');
     }
 }

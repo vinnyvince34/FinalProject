@@ -23,6 +23,6 @@ class Schedule extends Model
     }
 
     public function reserved_seats(){
-        return $this->belongsTo('App\Models\ReservedSeats', 'schedule_id');
+        return $this->hasMany('App\Models\ReservedSeats', 'schedule_id');
     }
 }

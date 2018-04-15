@@ -139,7 +139,7 @@ class ScheduleController extends Controller
             return response(
                     $var,200
             );
-            
+
         }catch(\Exception $e){
             return response(
                 $e->getMessage(), 400

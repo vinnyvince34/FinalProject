@@ -20,7 +20,7 @@ class ReservedSeats extends Model
     
     public function schedule()
     {
-        return $this->hasOne('App\Models\Schedule', 'schedule_id');
+        return $this->belongsTo('App\Models\Schedule', 'schedule_id');
     }
 
     public function all_seats(){

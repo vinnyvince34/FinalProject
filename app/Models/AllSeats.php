@@ -20,6 +20,6 @@ class AllSeats extends Model
     }
     // 'App\Models\Theatres', 'theatre_id'
     public function theatre(){
-        return $this->hasOne('App\Models\Theatre', 'theatre_id');
+        return $this->belongsTo('App\Models\Theatre', 'theatre_id');
     }
 }

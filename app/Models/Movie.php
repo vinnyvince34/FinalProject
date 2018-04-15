@@ -15,7 +15,7 @@ class Movie extends Model
     public $incrementing = false;
 
     public function schedule(){
-        return $this->belongsTo('App\Models\Schedule', 'movie_id');
+        return $this->hasMany('App\Models\Schedule', 'movie_id');
     }
     
     

@@ -21,15 +21,15 @@ class Customer extends Authenticatable implements JWTSubject
     
     public function transaction()
     {
-        return $this->hasMany('App\Models\Transaction','user_id');
+        return $this->hasMany('App\Models\Transaction','customer_id');
     }
 
     public function credit_card(){
-        return $this->hasMany('App\Models\CreditCard', 'user_id');
+        return $this->hasMany('App\Models\CreditCard', 'customer_id');
     }
 
     public function preferred_cinema(){
-        return $this->hasOne('App\Models\Cinema', 'preferred_cinema_id');
+        return $this->belongsTo('App\Models\Cinema', 'preferred_cinema_id');
     }
 
     /**

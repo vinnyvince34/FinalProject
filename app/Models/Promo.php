@@ -15,6 +15,6 @@ class Promo extends Model
     public $incrementing = false;
 
     public function transaction(){
-        return $this->belongsTo('App\Models\Transaction', 'promo_id');
+        return $this->hasMany('App\Models\Transaction', 'promo_id');
     }
 }
