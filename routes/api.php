@@ -13,6 +13,11 @@ use Illuminate\Http\Request;
 |
 */
 
+header('Access-Control-Allow-Origin:*');//nerima dari port mana aja
+header('Access-Control-Allow-Headers:Authorization, X-Requested-With, content-type, access-control-allow-origin, access-control-allow-methods, access-control-allow-headers, X-XSRF-TOKEN, Origin, X-Auth-Token, Authorization');//nerima header apa aja
+header('Access-Control-Allow-Methods:GET,POST,PUT,PATCH,DELETE');//method yang bisa diterima dari front end
+
+
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
@@ -22,7 +27,9 @@ Route::middleware('auth:api')->get('/item', function (Request $request) {
 });
 
 //crud
-Route::resource('customer', 'CustomerController');
+Route::get('customer/{id}', 'CustomerController@show');
+Route::post('customer', 'CustomerController@store');
+Route::put('customer', 'CustomerController@update');
 Route::resource('credit_card', 'CreditCardController');
 Route::resource('cinema', 'CinemaController');
 Route::resource('movie', 'MovieController');

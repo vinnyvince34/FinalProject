@@ -61,14 +61,13 @@ class CustomerController extends Controller
     {
         try{
 
-            $var = Customer::findOrFail($id)
-                            ->join('cinemas', 'cinemas.id', '=', 'customers.preferred_cinema_id');
+            $var = Customer::findOrFail($id);
 
             return response([$var], 200);
 
         } catch (\Exception $e) {
 
-            return response("Movie not found.", 400);
+            return response("Customer not found.", 400);
 
         }
     }
@@ -80,11 +79,11 @@ class CustomerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
         try {
 
-            $var = Customer::findOrFail($id);
+            $var = Customer::findOrFail($request->id);
 
             if($request->preferred_cinema_id == NULL){
                 $request->preferred_cinema_id = $var->preferred_cinema_id;
