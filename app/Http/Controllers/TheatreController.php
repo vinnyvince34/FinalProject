@@ -28,7 +28,7 @@ class TheatreController extends Controller
         try{
             $new = $this->validate($request, [
                 'cinema_id' => 'required|min:3|max:50',
-                'type_id' => 'required|numeric',
+                'type_id' => 'required',
                 'theatre_number' => 'required|min:3'
             ]);
 

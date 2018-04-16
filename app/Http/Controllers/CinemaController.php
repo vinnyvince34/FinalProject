@@ -51,18 +51,27 @@ class CinemaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request)
     {
         try{
 
-            $var = Cinema::findOrFail($id);
+            $var = Cinema::all();
 
             return response([$var], 200);
 
         } catch (\Exception $e) {
 
-            return response("Movie not found.", 400);
+            return response("Cinema not found.", 400);
 
+        }
+    }
+
+    public function showCity(Request $request) {
+        try {
+            $city = Cinema::select('city')->get();
+            return $city;
+        } catch(Exception $e) {
+            return response($e->getMessage());
         }
     }
 
@@ -73,11 +82,11 @@ class CinemaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
         try {
 
-            $var = Cinema::findOrFail($id);
+            $var = Cinema::findOrFail($request->id);
 
             if($request->cinema_name == NULL){
                 $request->cinema_name = $var->cinema_name;
@@ -98,6 +107,7 @@ class CinemaController extends Controller
                 'address' => $request->address,
                 'cinema_what' => $request->cinema_what,
             ]);
+            $var->save();
 
         } catch (\Exception $e) {
 

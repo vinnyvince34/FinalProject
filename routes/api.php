@@ -30,15 +30,38 @@ Route::middleware('auth:api')->get('/item', function (Request $request) {
 Route::get('customer/{id}', 'CustomerController@show');
 Route::post('customer', 'CustomerController@store');
 Route::put('customer', 'CustomerController@update');
+
 Route::resource('credit_card', 'CreditCardController');
-Route::resource('cinema', 'CinemaController');
-Route::resource('movie', 'MovieController');
-Route::resource('schedule', 'ScheduleController');
+
+Route::get('cinema', 'CinemaController@show');
+Route::put('cinema/{id}', 'CinemaController@update');
+Route::post('cinema', 'CinemaController@store');
+Route::get('city', 'CinemaController@showCity');
+
+Route::get('movie', 'MovieController@getMovie');
+Route::post('movie', 'MovieController@store');
+Route::put('movie', 'MovieController@update');
+Route::get('movie/comingsoon', 'MovieController@showComingSoon');
+Route::get('movie/nowplaying', 'MovieController@showNowPlaying');
+
+
+Route::get('schedule','ScheduleController@getSchedule');
+//Route::resource('schedule', 'ScheduleController');
+
 Route::resource('room_type', 'RoomTypeController');
+
 Route::resource('theatre', 'TheatreController');
-Route::resource('all_seats', 'AllSeatsController');
-Route::resource('transaction', 'TransactionController');
+
+Route::get('all_seats', 'AllSeatsController@show');
+Route::post('all_seats', 'AllSeatsController@store');
+Route::put('all_seats/{id}', 'AllSeatsController@update');
+
+Route::get('transaction', 'TransactionController@show');
+Route::get('transaction', 'TransactionController@store');
+Route::get('transaction/{id}', 'TransactionController@update');
+
 Route::resource('reserved_seats', 'ReservedSeatsController');
+
 Route::resource('promo', 'PromoController');
 
 //display on web
@@ -54,6 +77,7 @@ Route::get('all_seats/by_schedule/{id}', 'AllSeatsController@seatBySchedule');
 
 //schedule
 Route::get('schedule/byCity', 'ScheduleController@byCity');
+Route::post('schedule', 'ScheduleController@store');
 
 
 

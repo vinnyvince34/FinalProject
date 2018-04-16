@@ -7,11 +7,7 @@ use App\Models\Movie;
 
 class MovieController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+   
     public function index()
     {
         return response([
@@ -19,12 +15,7 @@ class MovieController extends Controller
             ], 200);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+ 
     public function store(Request $request)
     {
         try{
@@ -53,17 +44,11 @@ class MovieController extends Controller
         }
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
+    public function getMovie(Request $request)
     {
         try{
 
-            $var = Movie::findOrFail($id);
+            $var = Movie::findOrFail($request->id);
 
             return response([$var], 200);
 
@@ -74,13 +59,18 @@ class MovieController extends Controller
         }
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    public function showComingSoon() {
+        $mov = Movie::where('status', 'CS')->get();
+
+        return $mov;
+    }
+
+    public function showNowPlaying() {
+        $mov = Movie::where('status', 'NP')->get();
+
+        return $mov;
+    }
+
     public function update(Request $request, $id)
     {
         try {

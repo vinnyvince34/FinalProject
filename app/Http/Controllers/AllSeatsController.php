@@ -28,8 +28,8 @@ class AllSeatsController extends Controller
     {
         try{
 
-            $new = $this->validate($request->all(), [
-                'seat_number' => 'required|digits:8|unique:credit_cards,id',
+            $new = $this->validate($request, [
+                'seat_number' => 'required',
                 'theatre_id' => 'required'
             ]);
 
@@ -52,18 +52,18 @@ class AllSeatsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request)
     {
         // i dont think we need this thou
         try{
 
-            $var = AllSeats::findOrFail($id);
+            $var = AllSeats::all();
 
             return response([$var], 200);
 
         } catch (\Exception $e) {
 
-            return response("Movie not found.", 400);
+            return response("Seat not found.", 400);
 
         }
     }
@@ -75,10 +75,10 @@ class AllSeatsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
         try {
-            $var = AllSeats::findOrFail($id);
+            $var = AllSeats::findOrFail($request->id);
 
             if($request->seat_number == NULL){
                 $request->seat_number = $var->seat_number;
