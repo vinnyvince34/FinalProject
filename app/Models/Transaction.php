@@ -11,7 +11,8 @@ class Transaction extends Model
     protected $fillable = ['customer_id', 'quantity', 'total_price', 'promo_id'];
 
     protected $casts = ['id' => 'string'];
-    protected $primaryKey = "id";
+    protected $primaryKey = 'id';
+    protected $keyType = 'string';
     
     public $incrementing = false;
     

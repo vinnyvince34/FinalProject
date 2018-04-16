@@ -79,7 +79,8 @@ Route::get('all_seats/by_schedule/{id}', 'AllSeatsController@seatBySchedule');
 Route::get('schedule/byCity', 'ScheduleController@byCity');
 Route::post('schedule', 'ScheduleController@store');
 
-
+// purchases
+Route::post('purchases', 'PurchasesController@store');
 
 Route::post('register', 'AuthController@register');
 Route::post('login', 'AuthController@login');
