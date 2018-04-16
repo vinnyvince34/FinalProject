@@ -97,3 +97,6 @@ Route::group(['middleware' => ['jwt.auth']], function() {
 
 
 });
+
+
+Route::get('availableSeat','AllSeatsController@getAvaSeat');

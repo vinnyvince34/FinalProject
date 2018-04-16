@@ -5,11 +5,11 @@ namespace App\Http\Controllers;
 use App\Models\Theatre;
 use Illuminate\Http\Request;
 use App\Models\Transaction;
-use App\Traits\SomeStoreTraits;
+use App\Traits\StoreMethods;
 
 class TransactionController extends Controller
 {
-    use SomeStoreTraits;
+    use StoreMethods;
     /**
      * Display a listing of the resource.
      *

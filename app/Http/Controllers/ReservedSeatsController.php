@@ -4,12 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\ReservedSeats;
-use App\Traits\SomeStoreTraits;
+use App\Traits\StoreMethods;
 
 
 class ReservedSeatsController extends Controller
 {
-    use SomeStoreTraits;
+    use StoreMethods;
     /**
      * Display a listing of the resource.
      *

@@ -152,10 +152,14 @@ class ScheduleController extends Controller
         $result = array();
         $cinemas = Cinema::where('city',$request->city)->get();
         foreach($cinemas as $cinema){
+            $cnt=0;
             foreach($cinema->theatre as $t){
                 $schedules = Schedule::where('theatre_id',$t->id)
                                     ->where('movie_id',$request->id)
                                     ->get();
+                
+                if(count($schedules)==0) continue;
+               
                 foreach($schedules as $schedule){
                     $schedule['cinemas'] = $cinema->cinema_name;
                 }
