@@ -29,7 +29,7 @@ Route::middleware('auth:api')->get('/item', function (Request $request) {
 //crud
 Route::get('customer/{id}', 'CustomerController@show');
 Route::post('customer', 'CustomerController@store');
-Route::put('customer', 'CustomerController@update');
+Route::put('customer/{id}', 'CustomerController@update');
 
 Route::resource('credit_card', 'CreditCardController');
 

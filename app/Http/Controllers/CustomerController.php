@@ -104,7 +104,7 @@ class CustomerController extends Controller
                 $request->phone_number = $var->phone_number;
             }
             if($request->email == NULL){
-                $request->email = $var->remail;
+                $request->email = $var->email;
             }
             if($request->password == NULL){
                 $request->password = $var->password;
