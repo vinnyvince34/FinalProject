@@ -28,7 +28,7 @@ class PromoController extends Controller
         try{
             $new = $this->validate($request, [
                 'name' => 'required|min:3|max:50',
-                'description' => 'required|numeric',
+                'description' => 'required',
                 'value' => 'required|min:3',
                 'image_url' => 'required|min:3'
             ]);
@@ -73,10 +73,10 @@ class PromoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
         try {
-            $var = Promo::findOrFail($id);
+            $var = Promo::findOrFail($request->id);
 
             if($request->name == NULL){
                 $request->name = $var->name;
@@ -97,6 +97,8 @@ class PromoController extends Controller
                 'value' => $request->value,
                 'image_url' => $request->image_url
             ]);
+
+            $var->save();
 
         } catch (\Exception $e) {
 

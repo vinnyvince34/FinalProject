@@ -62,7 +62,10 @@ Route::get('transaction/{id}', 'TransactionController@update');
 
 Route::resource('reserved_seats', 'ReservedSeatsController');
 
-Route::resource('promo', 'PromoController');
+Route::get('promo/{id}', 'PromoController@show');
+Route::get('promo', 'PromoController@index');
+Route::post('promo', 'PromoController@store');
+Route::put('promo/{id}', 'PromoController@update');
 
 //display on web
 //Route::get('movie/now_playing/carousel', 'MovieController@carousel');
