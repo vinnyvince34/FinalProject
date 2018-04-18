@@ -8,7 +8,6 @@ use Illuminate\Http\Request;
 use Stripe\{Stripe, Charge, Customer, Token};
 use App\Models\{Transaction, ReservedSeats, RoomType, AllSeats};
 
-
 class PurchasesController extends Controller
 {
     use StoreMethods;
@@ -16,36 +15,48 @@ class PurchasesController extends Controller
     // i need: customer_id, schedule_id, array[seat_id], promo_id, quantity, total_price
 
     public function store(Request $request){
+        // dd($request);
         $total_price = AllSeats::findOrFail($request->seat_id)->theatre->roomType->weekday_price;
+        // return $total_price;
 
         Stripe::setApiKey(config('services.stripe.secret'));
 
-
-        $customer = Customer::create(array(
+        $user = Customer::create(array(
             'email' => $request->stripeEmail,
             'source' => $request->stripeToken
         ));
 
-        Charge::create(array(
-            'customer' => $customer->id,
+        // $card = $stripe->cards()->create($customer->id, $request->stripeToken);
+        $charge = Charge::create(array(
+            'customer' => $user->id,
             'amount' =>  $total_price*100,                // amount -> nembak harga ke si room_type
             'currency' => 'idr'
         ));
 
-        $transaction_details = [
-            'customer_id' => $request->user()->id,
-            'quantity' => 1,
-            'total_price' => $total_price,
-            'promo_id' => $request->promo_id
-        ];
+        // return $charge;
 
-        $new_transaction = $this->storeTransaction($transaction_details);
+        $transaction_details = new Request([
+            'user_id' => $request->user_id,
+            'quantity' => $request->quantity,
+            'total_price' => $request->total_price,
+            'promo_id' => $request->promo_id
+        ]);
+
+        // return $transaction_details;
+
+        // return "hi";
+
+        $new_transaction = $this->storeTransaction($transaction_details)[0];
+
+        // return "hi";
 
         $reserve_seat_detail = new Request([
             'seat_id' => $request->seat_id,
-            'transaction_id' => $new_transaction->id,
+            'transaction_id' => $new_transaction = $new_transaction->id,
             'schedule_id' => $request->schedule_id
         ]);
+
+        // return $reserve_seat_detail;
 
         $new_biji = $this->storeReservedSeats($reserve_seat_detail);
 

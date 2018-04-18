@@ -28,17 +28,21 @@ Route::middleware('auth:api')->get('/item', function (Request $request) {
 
 //crud
 Route::get('customer/{id}', 'CustomerController@show');
+Route::get('customer', 'CustomerController@index');
 Route::post('customer', 'CustomerController@store');
 Route::put('customer/{id}', 'CustomerController@update');
 
-Route::resource('credit_card', 'CreditCardController');
+// Route::resource('credit_card', 'CreditCardController');
 
-Route::get('cinema', 'CinemaController@show');
+Route::get('cinema', 'CinemaController@index');
+Route::get('cinema/{id}', 'CinemaController@show');
 Route::put('cinema/{id}', 'CinemaController@update');
 Route::post('cinema', 'CinemaController@store');
+
 Route::get('city', 'CinemaController@showCity');
 
 Route::get('movie', 'MovieController@getMovie');
+Route::get('movie/all', 'MovieController@index');
 Route::post('movie', 'MovieController@store');
 Route::put('movie', 'MovieController@update');
 Route::get('movie/comingsoon', 'MovieController@showComingSoon');
@@ -46,11 +50,20 @@ Route::get('movie/nowplaying', 'MovieController@showNowPlaying');
 
 
 Route::get('schedule','ScheduleController@getSchedule');
+Route::get('schedule/all','ScheduleController@index');
+Route::post('schedule','ScheduleController@store');
+Route::put('schedule','ScheduleController@update');
 //Route::resource('schedule', 'ScheduleController');
 
-Route::resource('room_type', 'RoomTypeController');
+Route::get('room_type', 'RoomTypeController@index');
+Route::get('room_type/{id}', 'RoomTypeController@show');
+Route::post('room_type', 'RoomTypeController@store');
+Route::put('room_type/{id}', 'RoomTypeController@update');
 
-Route::resource('theatre', 'TheatreController');
+Route::get('theatre', 'TheatreController@index');
+Route::get('theatre/{id}', 'TheatreController@show');
+Route::post('theatre', 'TheatreController@store');
+Route::put('theatre/{id}', 'TheatreController@update');
 
 Route::get('all_seats', 'AllSeatsController@show');
 Route::post('all_seats', 'AllSeatsController@store');
@@ -60,7 +73,10 @@ Route::get('transaction', 'TransactionController@show');
 Route::get('transaction', 'TransactionController@store');
 Route::get('transaction/{id}', 'TransactionController@update');
 
-Route::resource('reserved_seats', 'ReservedSeatsController');
+Route::get('reserved_seats', 'ReservedSeatsController@index');
+Route::get('reserved_seats/{id}', 'ReservedSeatsController@show');
+Route::post('reserved_seats', 'ReservedSeatsController@store');
+Route::put('reserved_seats/{id}', 'ReservedSeatsController@put');
 
 Route::get('promo/{id}', 'PromoController@show');
 Route::get('promo', 'PromoController@index');
@@ -76,11 +92,12 @@ Route::put('promo/{id}', 'PromoController@update');
 Route::get('credit_card/by_customer/{id}', 'CreditCardController@byCustomer');
 
 //seats
-Route::get('all_seats/by_schedule/{id}', 'AllSeatsController@seatBySchedule');
+// Route::get('all_seats/by_schedule/{id}', 'AllSeatsController@seatBySchedule');
+Route::get('availableSeat','AllSeatsController@getAvaSeat');
 
 //schedule
-Route::get('schedule/byCity', 'ScheduleController@byCity');
-Route::post('schedule', 'ScheduleController@store');
+// Route::get('schedule/byCity', 'ScheduleController@byCity');
+// Route::post('schedule', 'ScheduleController@store');
 
 // purchases
 Route::post('purchases', 'PurchasesController@store');
@@ -100,6 +117,3 @@ Route::group(['middleware' => ['jwt.auth']], function() {
 
 
 });
-
-
-Route::get('availableSeat','AllSeatsController@getAvaSeat');

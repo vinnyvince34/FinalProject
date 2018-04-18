@@ -89,10 +89,10 @@ class ReservedSeatsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
         try {
-            $var = ReservedSeats::findOrFail($id);
+            $var = ReservedSeats::findOrFail($request->id);
 
             if($request->seat_id == NULL){
                 $request->seat_id = $var->seat_id;
@@ -109,6 +109,8 @@ class ReservedSeatsController extends Controller
                 'transaction_id' => $request->transaction_id,
                 'schedule_id' => $request->schedule_id
             ]);
+
+            $var->save();
 
         } catch (\Exception $e) {
 

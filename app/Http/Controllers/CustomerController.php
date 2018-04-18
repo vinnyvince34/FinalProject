@@ -12,10 +12,10 @@ class CustomerController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-//    public function index()
-//    {
-//        return Customer::all();
-//    }
+    public function index()
+    {
+        return Customer::all();
+    }
 
     /**
      * Store a newly created resource in storage.

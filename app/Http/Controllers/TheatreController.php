@@ -72,10 +72,10 @@ class TheatreController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
         try {
-            $var = Theatre::findOrFail($id);
+            $var = Theatre::findOrFail($request->id);
 
             if($request->cinema_id == NULL){
                 $request->cinema_id = $var->cinema_id;
@@ -92,6 +92,8 @@ class TheatreController extends Controller
                 'type_id' => $request->type_id,
                 'theatre_number' => $request->theatre_number
             ]);
+
+            $var->save();
 
         } catch (\Exception $e) {
 

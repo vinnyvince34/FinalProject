@@ -34,34 +34,35 @@ trait StoreMethods {
             return $new;
 
         } catch(\Exception $e){
-
-            return response([
-                $e
-            ], 400);
+            dd($e);
+            // return response([
+            //     $e
+            // ], 400);
         }
     }
 
     public function storeTransaction(Request $request){
         try{
             $var = $this->validate($request, [
-                'customer_id' => 'required',
+                'user_id' => 'required',
                 'quantity' => 'required',
                 'total_price' => 'required',
                 'promo_id' => 'required'
             ]);
+            // dd($var);
 
             $new = Transaction::create($var);
 
             //return last Transaction with its id (since somehow creating does not return id
-            $matchThese = ['customer_id' => $new->customer_id, 'created_at' => $new->created_at];
+            $matchThese = ['user_id' => $new->user_id, 'created_at' => $new->created_at];
             $new = Transaction::where($matchThese)->get();
 
             return Collection::unwrap($new);
 
         } catch(\Exception $e){
 
-            return response([$e]);
-
+            // return response([$e]);
+            dd($e);
         }
     }
 

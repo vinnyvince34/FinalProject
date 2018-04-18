@@ -152,49 +152,49 @@ class MovieController extends Controller
         }
     }
 
-    public function carousel(){
-        try{
-            $var = Movie::where('status', '=', 'np')
-                        ->limit('5');
+    // public function carousel(){
+    //     try{
+    //         $var = Movie::where('status', '=', 'np')
+    //                     ->limit('5');
 
-            return response(
-                [$var],200
-            );
+    //         return response(
+    //             [$var],200
+    //         );
 
-        }catch(\Exception $e){
-            return response(
-                $e->getMessage(), 400
-            );
-        }
-    }
+    //     }catch(\Exception $e){
+    //         return response(
+    //             $e->getMessage(), 400
+    //         );
+    //     }
+    // }
 
-    public function nowPlaying(){
-        try{
-            $var = Movie::where('status', '=', 'np');
+    // public function nowPlaying(){
+    //     try{
+    //         $var = Movie::where('status', '=', 'np');
 
-            return response(
-                [$var],200
-            );
+    //         return response(
+    //             [$var],200
+    //         );
 
-        }catch(\Exception $e){
-            return response(
-                $e->getMessage(), 400
-            );
-        }
-    }
+    //     }catch(\Exception $e){
+    //         return response(
+    //             $e->getMessage(), 400
+    //         );
+    //     }
+    // }
 
-    public function comingSoon(){
-        try{
-            $var = Movie::where('status', '=', 'cs');
+    // public function comingSoon(){
+    //     try{
+    //         $var = Movie::where('status', '=', 'cs');
 
-            return response(
-                [$var],200
-            );
+    //         return response(
+    //             [$var],200
+    //         );
 
-        }catch(\Exception $e){
-            return response(
-                $e->getMessage(), 400
-            );
-        }
-    }
+    //     }catch(\Exception $e){
+    //         return response(
+    //             $e->getMessage(), 400
+    //         );
+    //     }
+    // }
 }

@@ -51,11 +51,11 @@ class CinemaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Request $request)
+    public function show($id)
     {
         try{
 
-            $var = Cinema::all();
+            $var = Cinema::findOrFail($id);
 
             return response([$var], 200);
 

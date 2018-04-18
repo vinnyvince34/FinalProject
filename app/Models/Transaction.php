@@ -8,7 +8,7 @@ class Transaction extends Model
 {
     protected $table = "transactions";
 //    protected $fillable = ['user_id', 'schedule_id', 'quantity', 'total_price', 'promo_id'];
-    protected $fillable = ['customer_id', 'quantity', 'total_price', 'promo_id'];
+    protected $fillable = ['user_id', 'quantity', 'total_price', 'promo_id'];
 
     protected $casts = ['id' => 'string'];
     protected $primaryKey = 'id';
@@ -22,7 +22,7 @@ class Transaction extends Model
     }
 
     public function user(){
-        return $this->belongsTo('App\Models\Customer', 'customer_id');
+        return $this->belongsTo('App\Models\Customer', 'user_id');
     }
 
     public function promo(){

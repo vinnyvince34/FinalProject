@@ -73,10 +73,10 @@ class ScheduleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
         try {
-            $var = Schedule::findOrFail($id);
+            $var = Schedule::findOrFail($request->id);
 
             if($request->movie_id == NULL){
                 $request->movie_id = $var->movie_id;
@@ -93,6 +93,8 @@ class ScheduleController extends Controller
                 'theatre_id' => $request->theatre_id,
                 'time' => $request->time
             ]);
+
+            $var->save();
 
         } catch (\Exception $e) {
 
