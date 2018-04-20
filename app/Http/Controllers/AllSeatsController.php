@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\AllSeats;
 use App\Models\ReservedSeats;
+use App\Models\Theatre;
+use App\Models\RoomType;
 use Illuminate\Support\Facades\DB;
 
 class AllSeatsController extends Controller
@@ -148,5 +150,12 @@ class AllSeatsController extends Controller
         $availSeats = AllSeats::where('theatre_id',$request->theatre_id)
                             ->whereNotIn('id',$reserveSeats)->get();
         return $availSeats;     
+    }
+
+    public function getPrice(Request $request) {
+        $seat = AllSeats::select('theatre_id')->where('id', $request->id)->get();
+        $type = Theatre::select('type_id')->whereIn('id', $seat)->get();
+        $price = RoomType::whereIn('id', $type)->get();
+        return $price;
     }
 }

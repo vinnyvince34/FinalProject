@@ -95,6 +95,8 @@ Route::get('credit_card/by_customer/{id}', 'CreditCardController@byCustomer');
 // Route::get('all_seats/by_schedule/{id}', 'AllSeatsController@seatBySchedule');
 Route::get('availableSeat','AllSeatsController@getAvaSeat');
 
+Route::get('pricing', 'AllSeatsController@getPrice');
+
 //schedule
 // Route::get('schedule/byCity', 'ScheduleController@byCity');
 // Route::post('schedule', 'ScheduleController@store');
