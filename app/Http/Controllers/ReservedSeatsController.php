@@ -143,4 +143,10 @@ class ReservedSeatsController extends Controller
             );
         }
     }
+
+    public function showHistory(Request $request) {
+	$info = ReservedSeats::where('transaction_id', $request->id)->get();
+
+	return $info;
+   }
 }

@@ -53,7 +53,8 @@ class AuthController extends Controller
             'phone_number' => $request->phone_number,
             'city' => $request->city,
             'email' => $request->email,
-            'password' => Hash::make($request->password)
+            'password' => Hash::make($request->password),
+	    'is_verified' => true
 
         ]);
         $user = Customer::all()->where("email", "=", $request->email)->first();

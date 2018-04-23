@@ -137,10 +137,10 @@ class CustomerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
         try{
-            $var = Customer::findOrFail($id);
+            $var = Customer::findOrFail($request->id);
             if(isset($var)){
                 $var -> delete();
                 return response(

@@ -12,7 +12,7 @@ class PurchaseRecordController extends Controller
 
     public function createPurchaseRecord(Request $request){
         $transaction_details = new Request([
-            'customer_id' => $request->customer_id,
+            'user_id' => $request->user_id,
             'quantity' => $request->quantity,
             'total_price' => $request->total_price,
             'promo_id' => $request->promo_id

@@ -146,4 +146,10 @@ class TransactionController extends Controller
             );
         }
     }
+
+    public function showHistory(Request $request) {
+	$info = Transaction::where('user_id', $request->id)->get();
+	
+	return $info;
+    }
 }

@@ -31,6 +31,9 @@ Route::get('customer/{id}', 'CustomerController@show');
 Route::get('customer', 'CustomerController@index');
 Route::post('customer', 'CustomerController@store');
 Route::put('customer/{id}', 'CustomerController@update');
+Route::delete('customer/{id}', 'CustomerController@destroy');
+Route::get('purchase-history/{id}', 'TransactionController@showHistory');
+Route::get('seatmovie-history/{id}', 'ReservedSeatsController@showHistory');
 
 // Route::resource('credit_card', 'CreditCardController');
 
@@ -82,6 +85,7 @@ Route::get('promo/{id}', 'PromoController@show');
 Route::get('promo', 'PromoController@index');
 Route::post('promo', 'PromoController@store');
 Route::put('promo/{id}', 'PromoController@update');
+Route::get('promoval/{id}', 'PromoController@getPromoValue');
 
 //display on web
 //Route::get('movie/now_playing/carousel', 'MovieController@carousel');
