@@ -131,8 +131,11 @@ class PromoController extends Controller
             );
         }
     }
-   public function getPromoValue(Request $request) {
-       $val = Promo::select('value')->where('id', $request->id)->get();
-       return $val;
-  }
+
+    public function getPromoValue(Request $request) {
+        $val = Promo::select('value')->where('id', $request->id)->get();
+
+        return $val;
+    } 
+
 }

@@ -33,7 +33,7 @@ Route::post('customer', 'CustomerController@store');
 Route::put('customer/{id}', 'CustomerController@update');
 Route::delete('customer/{id}', 'CustomerController@destroy');
 Route::get('purchase-history/{id}', 'TransactionController@showHistory');
-Route::get('seatmovie-history/{id}', 'ReservedSeatsController@showHistory');
+Route::get('seatmovie-history/{id}', 'ReservedSeatsController@showSeatMovie');
 
 // Route::resource('credit_card', 'CreditCardController');
 
@@ -82,6 +82,7 @@ Route::post('reserved_seats', 'ReservedSeatsController@store');
 Route::put('reserved_seats/{id}', 'ReservedSeatsController@put');
 
 Route::get('promo/{id}', 'PromoController@show');
+Route::get('promoval/{id}', 'PromoController@getPromoValue');
 Route::get('promo', 'PromoController@index');
 Route::post('promo', 'PromoController@store');
 Route::put('promo/{id}', 'PromoController@update');
