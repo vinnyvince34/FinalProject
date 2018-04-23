@@ -150,9 +150,9 @@ class TransactionController extends Controller
     public function showHistory(Request $request) {
         $infos = Transaction::where('user_id', $request->id)->get();
         foreach($infos as $info){
-            $info->reserved_seat;
+            // $info->reserved_seat;
             $info->reserved_seat->all_seats;
-            $info->reserved_seat->schedule;
+            // $info->reserved_seat->schedule;
             $info->reserved_seat->schedule->movie;
             $info->reserved_seat->schedule->theatre;
         }
