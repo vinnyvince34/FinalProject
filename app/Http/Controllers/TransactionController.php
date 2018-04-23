@@ -153,6 +153,8 @@ class TransactionController extends Controller
             $info->reserved_seat;
             $info->reserved_seat->all_seats;
             $info->reserved_seat->schedule;
+            $info->reserved_seat->schedule->movie;
+            $info->reserved_seat->schedule->theatre;
         }
 
         return $infos;
