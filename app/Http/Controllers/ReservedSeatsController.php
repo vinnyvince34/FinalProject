@@ -144,9 +144,9 @@ class ReservedSeatsController extends Controller
         }
     }
 
-    public function showHistory(Request $request) {
-	$info = ReservedSeats::where('transaction_id', $request->id)->get();
+    public function showSeatMovie(Request $request) {
+        $info = ReservedSeats::where('transaction_id', $request->id)->get();
 
-	return $info;
-   }
+        return $info;
+    }
 }

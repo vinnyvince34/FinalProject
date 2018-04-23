@@ -148,8 +148,11 @@ class TransactionController extends Controller
     }
 
     public function showHistory(Request $request) {
-	$info = Transaction::where('user_id', $request->id)->get();
-	
-	return $info;
+        $infos = Transaction::select('created_at', 'total_price')->where('user_id', $request->id)->get();
+        foreach($infos as $info){
+            $info->reserve_seat;
+        }
+
+        return $infos;
     }
 }
