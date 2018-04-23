@@ -18,7 +18,7 @@ class Transaction extends Model
     
     public function reserved_seat()
     {
-        return $this->belongsTo('App\Models\ReservedSeats','id','transaction_id');
+        return $this->hasOne('App\Models\ReservedSeats','transaction_id');
     }
 
     public function user(){
