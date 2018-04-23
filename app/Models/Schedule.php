@@ -15,7 +15,7 @@ class Schedule extends Model
     public $incrementing = false;
 
     public function movie(){
-        return $this->hasOne('App\Models\Movie', 'movie_id');
+        return $this->belongsTo('App\Models\Movie', 'movie_id');
     }
 
     public function theatre(){
